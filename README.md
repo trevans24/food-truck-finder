@@ -19,7 +19,7 @@ Project 3 Food Truck App
 1. Owner usage to see their reviews and have access to respond to a review?
 
 # Responses to the survey
-## Cole interviewe #1 “Jenna” 
+## Interviewe #1 
 1. Yelp -- see reviews how many stars, dislikes thed ads
 1. Yes to find food but note to order, thought about starbucks, doesn’t have a problem with walking in and ordering
 1. No -- thinks it would be cool to be able to find trucks
@@ -34,7 +34,7 @@ Project 3 Food Truck App
 ### Notes: I felt as if high ratings were an important part of the decision making process… I think distance traveled to a restaurant should be determined in minutes, instead of miles.  Would you walk to a restaurant if it was 5 min walk or a 45 min walk?... I think the average user probably measures distance traveled anywhere by the time it takes to get where they want to go.
 ### I preceded with the owner questions just to hear more potential Ideas about what an owner might need.   I agree that its not the most practical approach, but I was just trying to
 
-## Stefan Insight
+## Interviewee #2
 
 1. Yelp. Allows see reviews, google maps offers the same thing but it doesn’t always provide info, can’t find food I want. Yelp is up to date.
 1. Food type, price, categories.
@@ -43,7 +43,7 @@ Project 3 Food Truck App
 1. Want ASAP the kind of food I’m in the mood for, price is secondary. People just want food that they want. Filter by type of food, how far at this exact moment.
 1. Eat out for convenience, not luxury. 
 
-## Alexi Interviewee #1 (Laura)
+## Interviewee #4
 1. Postmates, UberEats
 1. “America” and it’s also convenient
 1. When they get my order wrong and surge delivery fees
@@ -72,7 +72,7 @@ info@thepastyrepbulic.com
 4166 Tennyson St
 Denver, CO 80212
 
-## Troy Interviewee(Rachael)
+## Interviewee #5
 1. Google maps is the easiest and only app prefered to be used
 1. Ease of use, never lost
 1. Broad terms can be used to find what you are looking for
@@ -90,7 +90,7 @@ Denver, CO 80212
 1. More scared of the sketchy food trucks and not the app to use
 1. Would find an app easy to use and helpful if there was a resource for it
 
-## Troy Interviewee(Trevor)
+## Interviewee #6
 1. No, there are currently no apps for usage. Did work for PostMates for a side job for a while.
 1. Their app was easy to use and clean to work with
 1. Use google maps the most of the time ~70%, rest is word of mouth
@@ -107,5 +107,7 @@ Denver, CO 80212
 
 ### Add notes: Useful for it to also have additional info on events for the Brewery that they are located at as well.
 
-# Pitch for the Idea
+# Research Results
 The market for food trucks in Denver is growing at an exponential amount every year. The problem however, is that most people do not know the type of food trucks out there, how many there are, or where these trucks are located. The trucks themselves have had to resort to using different social media outposts like FaceBook, Twitter, Instagram... just to hope to have a client base or customers who would be interested in finding them. If you are like me though, I do not go out of my way to find a food truck because frankly they aren't easy to find. Unless you are at a bar/brewery around Denver then you get used to seeing Food Trucks. The gap for truck owners and customers to connect is so vast in the Denver market that now there is time to have a tool that can bridge it for everyone.
+So far the results have shown that there is a need for a way for people interested in food trucks to have a tool for them to find a food truck closest to them. The overwhelming issue is that there is not currently any known way for people to find them other than word of mouth and by seeing them randomly on the street. People whom currently use technology from our interviews to find restaruants use primarily google maps, postmates, and yelp. These apps have ease of use for people to find what they are looking for in established full scale restaurants and do not currently have up to date information or any information in regards to the food trucks. There clearly is a need for an app similar to those mentioned that solve the issue of finding trucks and having exposure to current seeking customers.
+In the small research of the usage for trucks was very insightful. They currently have a bunch of other apps to try and reach out to customers but none that directly help connect the customer with the truck. Their expression in an app to reach out to customers and make it easier for them to be found by potential customers. They did have a interest to integrate with both google maps and google calendar to help them track where they are going. They would also like to consider having some way to reach out to their customers with social media integration as well.
