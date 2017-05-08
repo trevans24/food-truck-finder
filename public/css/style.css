@@ -1,0 +1,12 @@
+/*truck cards*/
+.card {
+	display: inline-block;
+	margin-bottom: 2px;
+	position: relative;
+}
+
+.card img {
+	float: left;
+	margin-top: 5px;
+	padding-right: 5px;
+}
