@@ -1,12 +1,24 @@
 // truck card
 .card {
-	display: inline-block;
+	display: block;
 	margin-bottom: 2px;
-	position: relative;
+	border: 1px solid #EEECEE;
 }
 
 .card img {
 	float: left;
-	margin-top: 5px;
-	padding-right: 5px;
+	margin: 10px 10px 0 0;
+	width: 15%;
 }
+
+.truck-info {
+	float: left;
+	width: 55%;
+	// border: 1px solid black;
+}
+
+.truck-directions {
+	border: 1px solid black;
+	display: block;
+}
+
