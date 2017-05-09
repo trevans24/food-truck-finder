@@ -28,12 +28,12 @@ gulp.task('styles', function(){
 // GULP RUNNING JS SCRIPTS minified FE
 
 gulp.task('scripts', function(){
-	return gulp.src('src/js/**/*.js')
+	return gulp.src('src/**/*.js')
 	.pipe(babel({
 		presets: ['es2015']
 	}))
 	// .pipe(uglify())
-	.pipe(gulp.dest('./public/js/'));
+	.pipe(gulp.dest('./public/'));
 });
 
 // GULP RUNNING HTML minified
