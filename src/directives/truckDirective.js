@@ -4,12 +4,10 @@ angular.module('FoodTruckApp')
 
 // TRUCK CARD DIRECTIVE
 	function truckCard(){
-		let directive = {
+		var directive = {
 			restrict: 'E',
 			replace: true,
-			templateUrl: '../templates/trucks/index.html',
-			scope: {
-				
-			}
-		}
+			templateUrl: '../templates/trucks/index.html'
+		};
+		return directive;
 	}
