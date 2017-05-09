@@ -1,6 +1,8 @@
-var DB = require('../models').models;
+const  DB = require('../models').models;
 
-var truckCreate = function() {
+const trucks = [];
+
+const truckCreate = function() {
 	return DB.Trucks.create(
 	{
 		name: 'carls jr.',
@@ -25,6 +27,6 @@ var truckCreate = function() {
 };
 
 truckCreate()
-.then(function(){
+.then(()=>{
 	process.exit();
 });
