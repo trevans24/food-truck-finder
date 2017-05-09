@@ -1,5 +1,7 @@
-console.log("Trucks Controller");
+// DO NOT CODE IN THIS FILE
+// DO NOT CODE IN THIS FILE
+// DO NOT CODE IN THIS FILE
+// DO NOT CODE IN THIS FILE
+"use strict";
 
-const app = angular.module('FoodTruckApp', ['ngRoute'])
-	.controller('TruckIndexController', TruckIndexController);
-
+console.log("Trucks Controller!");
