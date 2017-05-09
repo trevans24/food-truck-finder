@@ -1,8 +1,8 @@
 // truck card
 .card {
-	display: inline-block;
+	display: block;
 	margin-bottom: 2px;
-	position: relative;
+	border: 1px solid #EEECEE;
 }
 
 .card img {
@@ -21,3 +21,4 @@
     border-top: 1px solid #ccc;
     padding-top: 10px;
 }
+
