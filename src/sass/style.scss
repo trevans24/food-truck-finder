@@ -1,3 +1,15 @@
+// MAP
+#map {
+    height: 500px;
+    width: 100%;
+}
+
+.infoWindowContent {
+    font-size:  14px !important;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
 // truck card
 .card {
 	display: block;
@@ -7,7 +19,6 @@
 
 .card img {
 	float: left;
-<<<<<<< HEAD
 	margin: 10px 10px 0 0;
 	width: 15%;
 }
@@ -23,19 +34,4 @@
 	display: block;
 }
 
-=======
-	margin-top: 5px;
-	padding-right: 5px;
-}
 
-#map {
-    height: 500px;
-    width: 100%;
-}
-
-.infoWindowContent {
-    font-size:  14px !important;
-    border-top: 1px solid #ccc;
-    padding-top: 10px;
-}
->>>>>>> e923ab3099458e3a525aa6969bfad784fcfe5ddd
