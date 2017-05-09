@@ -42,9 +42,7 @@ angular.module('FoodTruckApp', ['ngRoute'])
 			.when('/trucks/:id/ratings/new', {
 				templateUrl: '../templates/ratings/new.html',
 				controller: 'RatingNewController as ratingNewController'
-			})
+			}):
 
-			// 
-
-
-	})
+			// Edit Rating?????
+	}):
