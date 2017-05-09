@@ -1,1 +1,1 @@
-console.log("Ratings Controller");
+console.log("Ratings Controller!");

@@ -1,13 +1,1 @@
-/*DO NOT STYLE OR CODE IN THIS FILE ONLY USE SASS FOLDER AND SCSS FILE*/
-/*DO NOT STYLE OR CODE IN THIS FILE ONLY USE SASS FOLDER AND SCSS FILE*/
-/*DO NOT STYLE OR CODE IN THIS FILE ONLY USE SASS FOLDER AND SCSS FILE*/
-
-.card {
-  display: inline-block;
-  margin-bottom: 2px;
-  position: relative; }
-
-.card img {
-  float: left;
-  margin-top: 5px;
-  padding-right: 5px; }
+.card{display:inline-block;margin-bottom:2px;position:relative}.card img{float:left;margin-top:5px;padding-right:5px}
