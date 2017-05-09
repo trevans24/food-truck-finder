@@ -5,7 +5,7 @@ const  DB = require('../models').models;
 const trucks = [];
 
 const truckCreate = function(){
-	return DB.Truck.create(
+	return DB.Trucks.create(
 	{
 		name: 'carls jr.',
 		img_link: 'http://www.carlsjr.co.nz/getattachment/62a7e415-c20a-4aed-8ffd-468ce9437dac/memphis-bbq/',
@@ -28,7 +28,21 @@ const truckCreate = function(){
 	});
 };
 
+const userCreate = function(){
+	return DB.Users.create(
+	{
+		name: 'Troy'
+	},
+	{
+		name: 'Alexi'
+	},
+	{
+		name: 'Cole'
+	});
+};
+
 truckCreate()
-.then(()=>{
-	process.exit();
+	.then(userCreate)
+	.then(function(){
+		process.exit();
 });
