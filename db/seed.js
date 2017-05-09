@@ -4,9 +4,11 @@ const  DB = require('../models').models;
 
 
 
+
 // const truckCreate = function(){
 // 	return DB.Trucks.create(
 const trucksArray = [
+
 	{
 		name: 'carls jr.',
 		img_link: 'http://www.carlsjr.co.nz/getattachment/62a7e415-c20a-4aed-8ffd-468ce9437dac/memphis-bbq/',
@@ -58,6 +60,7 @@ const trucksArray = [
 		longitude:-105.009618
 	}
 	];
+
 
 
 
