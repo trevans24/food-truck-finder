@@ -44,5 +44,4 @@ angular.module('FoodTruckApp', ['ngRoute'])
 				controller: 'RatingNewController as ratingNewController'
 			});
 
-			// Edit Rating?????
 	});

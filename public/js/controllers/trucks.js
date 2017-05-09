@@ -1,1 +1,1 @@
-"use strict";console.log("Trucks Controller!");
+"use strict";console.log("Trucks Controller!!");

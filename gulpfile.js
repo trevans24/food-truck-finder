@@ -12,11 +12,11 @@ let gulp = require('gulp'),
 gulp.task('default', function(){
 	console.log('i am a default task...');
 	gulp.watch('src/sass/**/*.scss', ['styles']);
-	gulp.watch('src/**/*.js', ['front']);
+	gulp.watch('src/**/*.js', ['scripts']);
 	gulp.watch('src/**/*.html', ['html']);
 });
 
-// GULP RUNNING CSS minified FILE FOR SASS
+// GULP RUNNING CSS minified
 
 gulp.task('styles', function(){
 	gulp.src('src/sass/**/*.scss')
@@ -27,8 +27,8 @@ gulp.task('styles', function(){
 
 // GULP RUNNING JS SCRIPTS minified FE
 
-gulp.task('front', function(){
-	return gulp.src('src/**/*.js')
+gulp.task('scripts', function(){
+	return gulp.src('src/js/**/*.js')
 	.pipe(babel({
 		presets: ['es2015']
 	}))
