@@ -15,7 +15,7 @@
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
 	<!-- angular -->
-	<script src="/bower_components/angular/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
   <script src="/bower_components/angular-route/angular-route.min.js"></script>
   <!-- map js file -->
   <script src="/js/map.js"></script>
@@ -25,12 +25,34 @@
   <script src="/js/controllers/trucks.js"></script>
 <!--   <script src="/js/controllers/favorites.js"></script> -->
 </head>
-<body>
+<body ng-app="mapsApp" >
 
 
 <h1>Hello Ninja Turtles</h1>
-
-
+{{"test"}}
+<div ng-controller="MapsController">
+    <div id="map"></div> 
+	<div id="class" ng-repeat="marker in markers | orderBy : 'title'">
+         <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+    </div>
+</div>
+</div>
 
 </body>
+<script>
+      function initMap() {
+        var uluru = {lat: 39.74, lng: -104.99};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPqCXeTyW5s4MiWTf6kzwm-r58azGK18Q&callback=initMap">
+    </script>
 </html>
