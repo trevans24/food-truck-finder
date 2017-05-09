@@ -30,18 +30,36 @@ angular.module('FoodTruckApp', ['ngRoute'])
 				controller: 'TruckShowController as truckController'
 			})
 
+			// New
+			.when('/trucks/new', {
+				templateUrl: '../templates/trucks/new.html',
+				controller: 'TruckNewController as truckController'
+			})
+
+			// Edit
+			.when('/trucks/:id', {
+				templateUrl: '../templates/trucks/edit.html',
+				controller: 'TruckEditController as truckController'
+			})
+
 			// Ratings Routes
 
 			// Show Truck Ratings
-			.when('/trucks/:id/ratings', {
-				templateUrl: '../templates/ratings/show.html',
-				controller: 'RatingShowController as ratingController'
+			.when('/trucks/:id/favorite', {
+				templateUrl: '../templates/favorties/show.html',
+				controller: 'FavoriteShowController as favoriteController'
 			})
 
 			// New Rating
-			.when('/trucks/:id/ratings/new', {
-				templateUrl: '../templates/ratings/new.html',
-				controller: 'RatingNewController as ratingNewController'
+			.when('/trucks/:id/favorite/new', {
+				templateUrl: '../templates/favorties/new.html',
+				controller: 'FavoriteNewController as favoriteController'
+			})
+
+			// Edit Rating
+			.when('/trucks/:id/favorite/:id', {
+				templateUrl: '../templates/favorties/edit.html',
+				controller: 'FavoriteEditController as favoriteController'
 			});
 
 	});
