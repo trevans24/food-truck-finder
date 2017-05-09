@@ -1,0 +1,28 @@
+{
+  "name": "food-truck-finder",
+  "version": "1.0.0",
+  "description": "Project 3 Food Truck App",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trevans24/food-truck-finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trevans24/food-truck-finder/issues"
+  },
+  "homepage": "https://github.com/trevans24/food-truck-finder#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "pg": "^6.1.5",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.30.4"
+  }
+}
