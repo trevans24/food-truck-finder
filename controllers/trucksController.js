@@ -26,10 +26,21 @@ function destroy(req,res){
 	});
 }
 
+function update(req,res){
+	Trucks.findById(req.params.id).then(function(ftchange){
+		
+		return ftchange.updateAttributes(req.body);
+	})
+	.then(function(ftchange){
+		res.json(ftchange);
+	});
+}
+
 module.exports.index = index;
 module.exports.show = show;
 module.exports.create = create;
 module.exports.destroy = destroy;
+module.exports.update = update;
 
 // maybe a way to mass export all functions from controller???
 // module.exports = {
