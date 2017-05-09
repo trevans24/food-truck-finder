@@ -8,7 +8,7 @@ angular.module('FoodTruckApp', ['ngRoute'])
 		});
 
 		$routeProvider
-		// Main Routes
+			// Main Routes
 			.when('/', {
 				templateUrl: '../templates/home.html'
 			})
@@ -16,20 +16,35 @@ angular.module('FoodTruckApp', ['ngRoute'])
 				templateUrl: '../templates/about.html'
 			})
 
-		// Truck Routes
+			// Truck Routes
 
-		// Index
+			// Index
 			.when('/trucks', {
 				templateUrl: '../templates/trucks/index.html',
-				controller: 'TrucksIndexController as trucksController'
+				controller: 'TruckIndexController as truckController'
 			})
 
-		// Show
+			// Show
 			.when('/trucks/:id', {
 				templateUrl: '../templates/trucks/show.html',
-				controller: 'TrucksShowController as trucksController'
+				controller: 'TruckShowController as truckController'
 			})
 
+			// Ratings Routes
+
+			// Show Truck Ratings
+			.when('/trucks/:id/ratings', {
+				templateUrl: '../templates/ratings/show.html',
+				controller: 'RatingShowController as ratingController'
+			})
+
+			// New Rating
+			.when('/trucks/:id/ratings/new', {
+				templateUrl: '../templates/ratings/new.html',
+				controller: 'RatingNewController as ratingNewController'
+			})
+
+			// 
 
 
 	})
