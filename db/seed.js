@@ -1,9 +1,11 @@
+'use strict'
+
 const  DB = require('../models').models;
 
 const trucks = [];
 
-const truckCreate = function() {
-	return DB.Trucks.create(
+const truckCreate = function(){
+	return DB.Truck.create(
 	{
 		name: 'carls jr.',
 		img_link: 'http://www.carlsjr.co.nz/getattachment/62a7e415-c20a-4aed-8ffd-468ce9437dac/memphis-bbq/',
