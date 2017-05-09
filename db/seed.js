@@ -5,7 +5,7 @@ const  DB = require('../models').models;
 const trucks = [];
 
 const truckCreate = function(){
-	return DB.Trucks.create(
+	return DB.Trucks.bulkCreate(
 	{
 		name: 'carls jr.',
 		img_link: 'http://www.carlsjr.co.nz/getattachment/62a7e415-c20a-4aed-8ffd-468ce9437dac/memphis-bbq/',
@@ -29,7 +29,7 @@ const truckCreate = function(){
 };
 
 const userCreate = function(){
-	return DB.Users.create(
+	return DB.Users.bulkCreate(
 	{
 		name: 'Troy'
 	},

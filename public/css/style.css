@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 .card{display:block;margin-bottom:2px;border:1px solid #eeecee}.card img{float:left;margin:10px 10px 0 0;width:15%}.truck-info{float:left;width:55%}.truck-directions{border:1px solid #000;display:block}
+=======
+.card{display:inline-block;margin-bottom:2px;position:relative}.card img{float:left;margin-top:5px;padding-right:5px}#map{height:500px;width:100%}.infoWindowContent{font-size:14px!important;border-top:1px solid #ccc;padding-top:10px}
+>>>>>>> e923ab3099458e3a525aa6969bfad784fcfe5ddd
