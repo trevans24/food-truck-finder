@@ -29,10 +29,9 @@
 </head>
 <body ng-app="mapsApp" >
 
-
-<h1>Foodie Foodie Truck Truck</h1>
-{{"test"}}
-<input class="input-group" ng-model="searchText" placeholder="Filter Search">
+<div class="container-fluid">
+  <input class="input-group" ng-model="searchText" placeholder="Search">
+</div>
 <div ng-controller="MapsController">
     <div id="map"></div> 
 	<div id="class" ng-repeat="marker in markers | filter:searchText">
