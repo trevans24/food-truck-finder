@@ -62,10 +62,10 @@ function MapsController($scope, $http){
 		console.log($scope.map);
 		var marker = new google.maps.Marker({
 			map: $scope.map,
-			position: new google.maps.LatLng(info.lat, info.long),
+			position: new google.maps.LatLng(info.latitude, info.longitude),
 			title: info.name
 	}); 
-	marker.content = '<div class="infoWindowContent">' + info.category + '<div>';
+	marker.content = '<div class="infoWindowContent">' + info.food_type + '<div>';
 
 	google.maps.event.addListener(marker, 'click', function(){
 		infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
