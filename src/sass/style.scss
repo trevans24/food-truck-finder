@@ -12,6 +12,11 @@ $font: 'Roboto', sans-serif;
 // Container/Div Sizing the entire window
 $width: 100%;
 
+#displayResults {
+	margin: 0 auto;
+	width: 20px;
+	position: relative;
+}
 // MAP
 #map {
     height: 500px;

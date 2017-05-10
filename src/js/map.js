@@ -1,22 +1,3 @@
-// var trucks = [
-// 	{
-// 		name: 'carls jr.',
-// 		description: 'not a truck',
-// 		lat: 39.74,
-// 		long: -104.55,
-// 		category: 'mexican'
-// 	},
-// 	{
-// 		name: 'InNOut',
-// 		desc: 'in n out',
-// 		lat: 39.74,
-// 		long: -104.99,
-// 		category: 'italian'
-// 	}
-// 	];
-
-console.log("mapss");
-
 angular.module('mapsApp',[])
 	.controller('MapsController', MapsController);
 
@@ -26,6 +7,7 @@ function MapsController($scope, $http){
 	var self = this;
 	self.trucks = [];
 	self.getTrucks = getTrucks;
+	self.calcRoute = calcRoute;
 
 	getTrucks();
 
@@ -44,9 +26,9 @@ function MapsController($scope, $http){
 	}
 
 	initMap();
-	
+
 	var mapOptions = {
-		zoom: 10,
+		zoom: 13,
 		center: new google.maps.LatLng(39.74, -104.99),
         mapTypeId: google.maps.MapTypeId.TERRAIN
 	};
@@ -58,14 +40,18 @@ function MapsController($scope, $http){
 	var infoWindow = new google.maps.InfoWindow();
 
 	var createMarker = function (info){
+		var image = "../images/icons/foodTruck.png";
+
 		console.log("Creating  marker " + info);
 		console.log($scope.map);
 		var marker = new google.maps.Marker({
 			map: $scope.map,
+			icon: image,
 			position: new google.maps.LatLng(info.latitude, info.longitude),
 			title: info.name
 	}); 
-	marker.content = '<div class="infoWindowContent">' + info.food_type + '<div>';
+	marker.content = '<div class="infoWindowContent">' + 
+	'Category: ' +info.food_type + '</div>' + '</br>' + info.description;
 
 	google.maps.event.addListener(marker, 'click', function(){
 		infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
@@ -74,14 +60,20 @@ function MapsController($scope, $http){
 	$scope.markers.push(marker);
 };
 
-	// for(var i = 0; i < trucks.length; i++){
-	// 	console.log(trucks[i] + " creating");
-	// 	createMarker(trucks[i]);
-	// }
-
 	$scope.openInfoWindow = function(e, selectedMarker){
 		e.preventDefault();
 		google.maps.event.trigger(selectedMarker, 'click');
 	};
+	function calcRoute(info) {
+		console.log(info);
+		// var start = 'denver, co';
+		// var end = info.;
+		// var request = {
+		//     origin: start,
+		//     destination: end,
+		//     travelMode: 'DRIVING'
+  // };
+	}
+
 }
 
