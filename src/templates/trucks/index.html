@@ -1,12 +1,12 @@
-<section ng-repeat="truck in trucks.all">
-	<div class="card col-md-12 col-xs-12" ng-controller="">
+<section ng-controller="TrucksIndexController as trucks">
+	<div class="card col-md-12 col-xs-12" ng-repeat="truck in trucks.all">
 		<img src="{{img_link}}">
 		<div class="truck-info">
 			<h5 class="truck-name">{{name}}</h5>
 			<h5 class="truck-cuisine">{{food_type}}</h5>
 			<div class="favorite">
 				<a href="#" class="btn favorite-btn">
-					<img src="https://upload.wikimedia.org/wikipedia/commons/5/52/Heart_icon_red_hollow.svg" alt="favorite-heart">{{favorited}}
+					<img src="./images/icons/favorite-un.png" alt="favorite-heart">{{favorited}}
 				</a>
 			</div>
 		</div>

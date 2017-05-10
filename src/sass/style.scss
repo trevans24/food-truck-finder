@@ -1,3 +1,10 @@
+$primary: #3684A5;
+$secondary: #3E98BE;
+$borderColor: #CCC;
+$fontColor: #c2C2C2;
+$locationPin:  #FFE066;
+$primaryButton: #F1D35F;
+
 // MAP
 #map {
     height: 500px;
@@ -6,20 +13,20 @@
 
 .infoWindowContent {
     font-size:  14px !important;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $borderColor;
     padding-top: 10px;
 }
 
-.container-fluid {
-	background-color: #3684A5;
+.heading {
+	background-color: $primary;
 	height: 100px;
 }
 
 .input-group {
-	background-color: #3E98BE;
+	background-color: $secondary;
 	border: 2px solid white;
 	border-radius: 20px;
-	color: #C2C2C2;
+	color: $fontColor;
 	font-family: 'Roboto', sans-serif;
 	height: 36px;
 	margin-top: 50px;
@@ -76,3 +83,26 @@
 	width: 55%;
 }
 // TRUCK CARD END//////////////////////////////////
+
+// TRUCK INDEX STYLING ///////////////////////////
+.main-truck-page {
+	// text-align: left;
+}
+
+.truck-description .btn {
+	background-color: $primaryButton;
+	color: white;
+	margin-left: 15%;
+}
+
+.truck-image {
+	font-family: 'Roboto', sans-serif;
+	height: auto;
+	width: 100%;
+}
+
+.main-truck-page .favorite-icon {
+	float: right;
+	margin: 20px;
+}
+// TRUCK INDEX END ///////////////////////////////
