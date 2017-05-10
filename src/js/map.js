@@ -29,6 +29,7 @@ function MapsController($scope, $http){
 
 	getTrucks();
 
+
 	function getTrucks(){
 		$http
 			.get("http://localhost:3000/api/trucks/")
