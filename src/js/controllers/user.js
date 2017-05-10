@@ -39,3 +39,11 @@ function LoginController($location, Account) {
 	};
 }
 
+// SIGNUP CONTROLLER
+SignupController.$inject = ['$location', 'Account'];
+function SignupController ($location, Account) {
+	var vm = this;
+	vm.new_user = {};
+
+	
+}
