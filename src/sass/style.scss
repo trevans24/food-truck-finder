@@ -91,8 +91,21 @@ $primaryButton: #F1D35F;
 
 .truck-description .btn {
 	background-color: $primaryButton;
+	border-radius: 20px;
 	color: white;
 	margin-left: 15%;
+}
+
+.truck-description h2 {
+	margin-bottom: -40px;
+}
+
+.truck-description h6 {
+	margin: -10px 0 20px 0;
+}
+
+.truck-description h3, h6 {
+	opacity: .6;
 }
 
 .truck-image {
@@ -104,5 +117,16 @@ $primaryButton: #F1D35F;
 .main-truck-page .favorite-icon {
 	float: right;
 	margin: 20px;
+}
+
+.contact {
+	float: left;
+	width: 100%;
+}
+
+.contact img {
+	float: left;
+	height: 1em;
+	margin: 10px 15px 30px 0;
 }
 // TRUCK INDEX END ///////////////////////////////
