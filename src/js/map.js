@@ -7,6 +7,8 @@ function MapsController($scope, $http) {
     self.trucks = [];
     self.getTrucks = getTrucks;
     self.calcRoute = calcRoute;
+
+    initMap();
     getTrucks();
     function getTrucks() {
         $http.get("http://localhost:3000/api/trucks/").then(function (response) {
@@ -18,7 +20,6 @@ function MapsController($scope, $http) {
             }
         });
     }
-    initMap();
     var mapOptions = {
         zoom: 13,
         center: new google.maps.LatLng(39.74, -104.99),
