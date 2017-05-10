@@ -3,6 +3,7 @@
 angular.module('mapsApp', []).controller('MapsController', MapsController);
 MapsController.$inject = ['$scope', '$http'];
 function MapsController($scope, $http) {
+
     var self = this;
     self.trucks = [];
     self.getTrucks = getTrucks;
@@ -58,4 +59,5 @@ function MapsController($scope, $http) {
         //     travelMode: 'DRIVING'
         // };
     }
+
 }

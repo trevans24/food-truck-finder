@@ -60,9 +60,13 @@
 </div>
 
 <div ng-controller="MapsController">
-    <div id="map"></div> 
-	<div id="class" ng-repeat="marker in markers | filter:searchText">
-     <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+
+    <div id="map"></div>
+  <button class="btn-success" ng-click="showme=true">Show Results</button>
+  <button class="btn-danger" ng-click="showme=false" ng-show="showme">Hide Results</button>
+	<div class="truckViews animate-show-hide" ng-repeat="marker in markers | filter:searchText" ng-show="showme">
+    <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+
   </div>
 </div>
 
