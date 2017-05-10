@@ -51,7 +51,7 @@ function MapsController($scope){
 		infoWindow.open($scope.map, marker);
 	});
 	$scope.markers.push(marker);
-}
+};
 
 	for(var i = 0; i < trucks.length; i++){
 		console.log(trucks[i]);

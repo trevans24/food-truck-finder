@@ -5,8 +5,12 @@ $borderColor: #CCC;
 $fontColor: #c2C2C2;
 $locationPin:  #FFE066;
 $primaryButton: #F1D35F;
+
 // Main font used in styling
 $font: 'Roboto', sans-serif;
+
+// Container/Div Sizing the entire window
+$width: 100%;
 
 // MAP
 #map {
@@ -34,7 +38,7 @@ $font: 'Roboto', sans-serif;
 	height: 36px;
 	margin-top: 50px;
 	opacity: .8;
-	width: 100%;
+	width: $width;
 }
 
 // TRUCK CARD START/////////////////////////////
@@ -111,7 +115,7 @@ $font: 'Roboto', sans-serif;
 .truck-image {
 	font-family: $font;
 	height: auto;
-	width: 100%;
+	width: $width;
 }
 // Heart Icon to click
 .main-truck-page .favorite-icon {
@@ -121,7 +125,7 @@ $font: 'Roboto', sans-serif;
 // Phone Number
 .contact {
 	float: left;
-	width: 100%;
+	width: $width;
 }
 // Phone Icon
 .contact img {
