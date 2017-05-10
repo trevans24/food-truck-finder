@@ -1,9 +1,12 @@
+// Declaring our main style colors
 $primary: #3684A5;
 $secondary: #3E98BE;
 $borderColor: #CCC;
 $fontColor: #c2C2C2;
 $locationPin:  #FFE066;
 $primaryButton: #F1D35F;
+// Main font used in styling
+$font: 'Roboto', sans-serif;
 
 // MAP
 #map {
@@ -16,18 +19,18 @@ $primaryButton: #F1D35F;
     border-top: 1px solid $borderColor;
     padding-top: 10px;
 }
-
+// Div at top of page
 .heading {
 	background-color: $primary;
 	height: 100px;
 }
-
+// Search Bar
 .input-group {
 	background-color: $secondary;
 	border: 2px solid white;
 	border-radius: 20px;
 	color: $fontColor;
-	font-family: 'Roboto', sans-serif;
+	font-family: $font;
 	height: 36px;
 	margin-top: 50px;
 	opacity: .8;
@@ -35,13 +38,13 @@ $primaryButton: #F1D35F;
 }
 
 // TRUCK CARD START/////////////////////////////
-// truck card overall shaping
+// truck card overall shape
 .card {
 	display: inline-block;
 	margin-bottom: 2px;
 	border: 1px solid #EEECEE;
 }
-
+// Truck Picture
 .card img {
 		float: left;
 		margin: 5px;
@@ -51,7 +54,7 @@ $primaryButton: #F1D35F;
 // truck descriptions
 .truck-info {
 	float: left;
-	font-family: 'Roboto', sans-serif;
+	font-family: $font;
 	margin-left: 5px;
 	width: 55%;
 	.truck-cuisine {
@@ -84,49 +87,46 @@ $primaryButton: #F1D35F;
 }
 // TRUCK CARD END//////////////////////////////////
 
-// TRUCK INDEX STYLING ///////////////////////////
-.main-truck-page {
-	// text-align: left;
-}
-
+// TRUCK INDEX.html STYLING ///////////////////////////
+// Description button
 .truck-description .btn {
 	background-color: $primaryButton;
 	border-radius: 20px;
 	color: white;
 	margin-left: 15%;
 }
-
+// Trucks Name
 .truck-description h2 {
 	margin-bottom: -40px;
 }
-
+// Trucks weblink
 .truck-description h6 {
 	margin: -10px 0 20px 0;
 }
-
+// Trucks cuisine and weblink
 .truck-description h3, h6 {
 	opacity: .6;
 }
-
+// Image of the truck
 .truck-image {
-	font-family: 'Roboto', sans-serif;
+	font-family: $font;
 	height: auto;
 	width: 100%;
 }
-
+// Heart Icon to click
 .main-truck-page .favorite-icon {
 	float: right;
 	margin: 20px;
 }
-
+// Phone Number
 .contact {
 	float: left;
 	width: 100%;
 }
-
+// Phone Icon
 .contact img {
 	float: left;
 	height: 1em;
 	margin: 10px 15px 30px 0;
 }
-// TRUCK INDEX END ///////////////////////////////
+// TRUCK INDEX.html END ///////////////////////////////
