@@ -1,6 +1,6 @@
 module.exports = function(sequelize, Sequelize){
 	var Trucks = sequelize.define('truck', {
-			name: Sequelize.STRING,
+		name: Sequelize.STRING,
 			img_link: Sequelize.STRING,
 			description: Sequelize.STRING,
 			food_type: Sequelize.STRING,
