@@ -9,6 +9,24 @@
     border-top: 1px solid #ccc;
     padding-top: 10px;
 }
+
+.container-fluid {
+	background-color: #3684A5;
+	height: 120px;
+}
+
+.input-group {
+	background-color: #3E98BE;
+	border: 2px solid white;
+	border-radius: 20px;
+	color: #C2C2C2;
+	font-family: 'Roboto', sans-serif;
+	height: 36px;
+	margin-top: 60px;
+	opacity: .8;
+	width: 100%;
+}
+
 // TRUCK CARD START/////////////////////////////
 // truck card overall shaping
 .card {
