@@ -10,28 +10,53 @@
     padding-top: 10px;
 }
 
-// truck card
+// truck card overall shaping
 .card {
-	display: block;
+	display: inline-block;
 	margin-bottom: 2px;
 	border: 1px solid #EEECEE;
 }
 
 .card img {
+		float: left;
+		margin: 5px;
+		width: 25%;
+	}
+
+// truck descriptions
+.truck-info {
 	float: left;
-	margin: 10px 10px 0 0;
+	font-family: 'Roboto', sans-serif;
+	margin-left: 5px;
+	width: 55%;
+	.truck-cuisine {
+		opacity: .7;
+	}
+}
+
+// favorite button and people count
+.favorite-btn a {
+	margin: 40px -5px 0 0;
+	width: 75%;
+}
+
+.favorite-btn img {
+	margin: -5px -15px;
 	width: 15%;
 }
 
-.truck-info {
+// truck direction button and distance
+.truck-directions {
 	float: left;
-	width: 55%;
-	// border: 1px solid black;
+	margin-top: 7px;
+	text-align: center;
+	width: 15%;
 }
 
-.truck-directions {
-	border: 1px solid black;
-	display: block;
+.truck-directions img {
+	margin-left: 12px;
+	width: 55%;
 }
+
 
 
