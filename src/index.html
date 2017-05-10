@@ -30,11 +30,12 @@
 <body ng-app="mapsApp" >
 
 
-<h1>Hello Ninja Turtles</h1>
+<h1>Foodie Foodie Truck Truck</h1>
 {{"test"}}
+<input class="input-group" ng-model="searchText" placeholder="Filter Search">
 <div ng-controller="MapsController">
     <div id="map"></div> 
-	<div id="class" ng-repeat="marker in markers | orderBy : 'title'">
+	<div id="class" ng-repeat="marker in markers | filter:searchText">
          <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
     </div>
 </div>

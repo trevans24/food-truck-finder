@@ -3,13 +3,15 @@ var trucks = [
 		name: 'carls jr.',
 		description: 'not a truck',
 		lat: 39.74,
-		long: -104.99
+		long: -104.55,
+		category: 'mexican'
 	},
 	{
 		name: 'InNOut',
 		desc: 'in n out',
 		lat: 39.74,
-		long: -104.99
+		long: -104.99,
+		category: 'italian'
 	}
 	];
 
@@ -21,8 +23,9 @@ angular.module('mapsApp',[])
 MapsController.$inject = ['$scope'];
 
 function MapsController($scope){
+
 	var mapOptions = {
-		zoom: 5,
+		zoom: 10,
 		center: new google.maps.LatLng(39.74, -104.99),
         mapTypeId: google.maps.MapTypeId.TERRAIN
 	};
