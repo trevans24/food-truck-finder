@@ -2,7 +2,7 @@
 
 console.log('Client Sided Controller');
 
-angular.module('FoodTruckApp', ['ngRoute']).config(function ($routeProvider, $locationProvider) {
+angular.module('FoodTruckApp', ['ngRoute', 'satellizer']).config(function ($routeProvider, $locationProvider) {
 	$locationProvider.html5Mode({
 		enabled: true,
 		requireBase: false
@@ -10,9 +10,36 @@ angular.module('FoodTruckApp', ['ngRoute']).config(function ($routeProvider, $lo
 
 	$routeProvider
 	// Main Routes
+	// HOME
 	.when('/', {
-		templateUrl: '../templates/home.html'
-	}).when('/about', {
+		templateUrl: '../templates/home.html',
+		controller: 'HomeController as home'
+	})
+	// SIGNUP
+	.when('/signup', {
+		templateUrl: '../templates/signup.html',
+		conroller: 'SignUpController as signin',
+		resolve: {
+			skipIfLoggedIn: skipIfLoggedIn
+		}
+	})
+	// LOGIN
+	.when('/login', {
+		templateUrl: '../templates/login.html',
+		controller: 'LoginController as login',
+		resolve: {
+			skipIfLoggedIn: skipIfLoggedIn
+		}
+	})
+	// LOGOUT
+	.when('/logout', {
+		controller: 'LogoutController as logout',
+		resolve: {
+			loginRequired: loginRequired
+		}
+	})
+	// ABOUT PAGE
+	.when('/about', {
 		templateUrl: '../templates/about.html'
 	})
 
@@ -61,4 +88,24 @@ angular.module('FoodTruckApp', ['ngRoute']).config(function ($routeProvider, $lo
 		templateUrl: '../templates/favorties/edit.html',
 		controller: 'FavoriteEditController as favoriteController'
 	});
+
+	function skipIfLoggedIn($q, $auth) {
+		var deferred = $q.defer();
+		if ($auth.isAuthenticated()) {
+			deferred.refect();
+		} else {
+			deferred.resolve();
+		}
+		return deferred.promise;
+	}
+
+	function logininRequired($q, $location, $auth) {
+		var deferred = $q.defer();
+		if ($auth.isAuthenticated()) {
+			deferred.resolve();
+		} else {
+			$location.path('/login');
+		}
+		return deferred.promise;
+	}
 });
