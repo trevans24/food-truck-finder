@@ -1,4 +1,4 @@
-console.log('Client Sided Controller');
+	console.log('Client Sided Controller');
 
 angular.module('FoodTruckApp', ['ngRoute'])
 	.config(($routeProvider, $locationProvider)=>{

@@ -21,7 +21,7 @@ angular.module('mapsApp', []).controller('MapsController', MapsController);
 MapsController.$inject = ['$scope'];
 
 function MapsController($scope) {
-
+	initMap();
 	var mapOptions = {
 		zoom: 10,
 		center: new google.maps.LatLng(39.74, -104.99),
