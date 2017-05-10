@@ -32,13 +32,14 @@
 <div class="container-fluid">
   <input class="input-group" ng-model="searchText" placeholder="Search">
 </div>
+
 <div ng-controller="MapsController">
     <div id="map"></div> 
 	<div id="class" ng-repeat="marker in markers | filter:searchText">
-         <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
-    </div>
+    <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
+  </div>
 </div>
-</div>
+
 
 </body>
 <script>
