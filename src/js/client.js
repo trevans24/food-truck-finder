@@ -22,56 +22,35 @@ angular.module('FoodTruckApp', ['ngRoute', 'ui.router',])
 			// 	controllerAs: 'main'
 			// })
 			// ABOUT PAGE
-			.state('about', {
-				url: '/about',
+			.when('/about', {
 				templateUrl: '../templates/about.html'
 			})
 
 			// Truck Routes
 
 			// Index
-			.state('trucks', {
-				url: '/trucks',
+			.when('/trucks', {
 				templateUrl: '../templates/trucks/index.html',
-				controller: 'TruckIndexController',
-				controllerAs: 'truckController',
-				resolve: {
-					skipIfLoggedIn: skipIfLoggedIn
-				}
+				controller: 'TruckIndexController as truckController'
 			})
 
 			// Show
 
-			.state('show', {
-				url: '/trucks/:id',
+			.when('/trucks/:id', {
 				templateUrl: '../templates/trucks/show.html',
-				controller: 'TruckShowController',
-				controllerAs: 'truckController',
-				resolve: {
-					skipIfLoggedIn: skipIfLoggedIn
-				}
+				controller: 'TruckShowController as truckController'
 			})
 
 			// New
-			.state('new', {
-				url: '/trucks/new',
+			.when('/trucks', {
 				templateUrl: '../templates/trucks/new.html',
-				controller: 'TruckNewController',
-				controllerAs: 'truckController',
-				resolve: {
-					skipIfLoggedIn: skipIfLoggedIn
-				}
+				controller: 'TruckNewController as truckController'
 			})
 
 			// Edit
-			.state('edit', {
-				url: '/trucks/:id',
+			.when('/trucks/:id', {
 				templateUrl: '../templates/trucks/edit.html',
-				controller: 'TruckEditController',
-				controllerAs: 'truckController',
-				resolve: {
-					skipIfLoggedIn: skipIfLoggedIn
-				}
+				controller: 'TruckEditController as truckController'
 			});
 
 			// Favorites Routes
@@ -81,10 +60,7 @@ angular.module('FoodTruckApp', ['ngRoute', 'ui.router',])
 			// 	url: '',
 			// 	templateUrl: '../templates/favorties/show.html',
 			// 	controller: 'FavoriteShowController as favoriteController',
-			// 	controllerAs: '',
-			// 	resolve: {
-			// 		skipIfLoggedIn: skipIfLoggedIn
-			// 	}
+			// 	controllerAs: ''
 			// })
 
 			// // New Rating
@@ -93,9 +69,6 @@ angular.module('FoodTruckApp', ['ngRoute', 'ui.router',])
 			// 	templateUrl: '../templates/favorties/new.html',
 			// 	controller: 'FavoriteNewController as favoriteController',
 			// 	controllerAs: '',
-			// 	resolve: {
-			// 		skipIfLoggedIn: skipIfLoggedIn
-			// 	}
 			// })
 
 			// // Edit Rating
@@ -107,5 +80,5 @@ angular.module('FoodTruckApp', ['ngRoute', 'ui.router',])
 			// 	resolve: {
 			// 		skipIfLoggedIn: skipIfLoggedIn
 			// 	}
-			});
+});
 
