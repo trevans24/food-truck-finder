@@ -16,7 +16,9 @@ app.use(trucksRouter); //pulls in config/routes.js
 
 app.use(express.static('public'));
 
-app.get('/',function(req,res){
+// CATCH ALL ROUTES
+
+app.get(['/','/login','/signup','/logout'], function(req,res){
 	res.sendFile(__dirname + '/public/index.html');
 });
 

@@ -2,23 +2,27 @@
 
 console.log('Client Sided Controller');
 
-angular.module('FoodTruckApp', ['ngRoute', 'satellizer']).config(function ($routeProvider, $locationProvider) {
+angular.module('FoodTruckApp', ['ngRoute', 'satellizer', 'ui.router']).config(function ($routeProvider, $locationProvider, $stateProvier, $urlRouterProvider) {
 	$locationProvider.html5Mode({
 		enabled: true,
 		requireBase: false
 	});
 
-	$routeProvider
+	$stateProvier
 	// Main Routes
 	// HOME
-	.when('/', {
-		templateUrl: '../templates/home.html',
-		controller: 'MainController as main'
+	.state('home', {
+		url: '/',
+		templateUrl: 'templates/home.html',
+		controller: 'MainController',
+		controllerAs: 'main'
 	})
 	// SIGNUP
-	.when('/signup', {
-		templateUrl: '../templates/signup.html',
-		conroller: 'SignUpController as signup',
+	.state('signup', {
+		url: '/signup',
+		templateUrl: 'templates/signup.html',
+		controller: 'SignupController',
+		controllerAs: 'signup',
 		resolve: {
 			skipIfLoggedIn: skipIfLoggedIn
 		}
