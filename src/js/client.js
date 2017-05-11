@@ -1,7 +1,7 @@
 console.log('Client Sided Controller');
 
-angular.module('FoodTruckApp', ['ngRoute', 'satellizer', 'ui.router', 'satellizer'])
-	.config(($routeProvider, $locationProvider, $stateProvier, $urlRouterProvider, satellizer)=>{
+angular.module('FoodTruckApp', ['ngRoute', 'ui.router',])
+	.config(($routeProvider, $locationProvider, $stateProvier, $urlRouterProvider)=>{
 		// using HTML 5 for location templates
 		$locationProvider.html5Mode({
 			enabled: true,
@@ -14,42 +14,12 @@ angular.module('FoodTruckApp', ['ngRoute', 'satellizer', 'ui.router', 'satellize
 		$stateProvier
 			// Main Routes
 			// HOME
-			.state('home', {
-				url: '/',
-				templateUrl: 'templates/home.html',
-				controller: 'MainController',
-				controllerAs: 'main'
-			})
-			// SIGNUP
-			.state('signup', {
-				url: '/signup',
-				templateUrl: 'templates/signup.html',
-				controller: 'SignupController',
-				controllerAs: 'signup',
-				resolve: {
-					skipIfLoggedIn: skipIfLoggedIn
-				}
-			})
-			// LOGIN
-			.state('login', {
-				url: '/login',
-				templateUrl: '../templates/login.html',
-				controller: 'LoginController',
-				controllerAs: 'login',
-				resolve: {
-					skipIfLoggedIn: skipIfLoggedIn
-				}
-			})
-			// LOGOUT
-			.state('logout', {
-				url: '/logout',
-				template: null,
-				controller: 'LogoutController',
-				controllerAs: 'logout',
-				resolve: {
-					loginRequired: loginRequired
-				}
-			})
+			// .state('home', {
+			// 	url: '/',
+			// 	templateUrl: 'templates/index.html',
+			// 	controller: 'MainController',
+			// 	controllerAs: 'main'
+			// })
 			// ABOUT PAGE
 			.state('about', {
 				url: '/about',
@@ -136,28 +106,4 @@ angular.module('FoodTruckApp', ['ngRoute', 'satellizer', 'ui.router', 'satellize
 			// 	resolve: {
 			// 		skipIfLoggedIn: skipIfLoggedIn
 			// 	}
-			// });
-
-// skipped if logged in user
-			function skipIfLoggedIn($q, $auth) {
-				var deferred = $q.defer();
-				if ($auth.isAuthenticated()) {
-					deferred.refect();
-				} else {
-					deferred.resolve();
-				}
-				return deferred.promise;
-			}
-
-// user must login
-			function logininRequired($q, $location, $auth) {
-				var deferred = $q.defer();
-				if ($auth.isAuthenticated()) {
-					deferred.resolve();
-				} else {
-					$location.path('/login');
-				}
-				return deferred.promise;
-			}
-
-	});
+			});
