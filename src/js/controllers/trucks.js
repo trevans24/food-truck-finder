@@ -49,7 +49,7 @@ function TruckShowController($http, $routeParams) {
 		console.log($routeParams.id);
 		$http.get('/api/trucks/' + $routeParams.id)
 		.then(function(res){
-			console.log(res);
+			console.log(res.data + " get one truck!!!!");
 			vm.oneTruck = res.data;
 		});
 	}

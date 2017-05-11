@@ -3,19 +3,17 @@ angular.module('mapsApp', []).controller('MapsController', MapsController);
 MapsController.$inject = ['$scope', '$http'];
 function MapsController($scope, $http) {
     var self = this;
-    self.trucks = [];
+    $scope.trucks = [];
     self.getTrucks = getTrucks;
-    self.calcRoute = calcRoute;
 
     initMap();
     getTrucks();
     function getTrucks() {
         $http.get("http://localhost:3000/api/trucks/").then(function (response) {
-            console.log(response.data);
             var trucks = response.data;
             for (var i = 0; i < trucks.length; i++) {
-                console.log(trucks[i] + " creating");
                 createMarker(trucks[i]);
+                $scope.trucks.push(trucks);
             }
         });
     }
@@ -38,7 +36,7 @@ function MapsController($scope, $http) {
             title: info.name
         });
         marker.content = '<div class="infoWindowContent">' + 'Category: ' + 
-        info.food_type + '</div>' + '</br>' + info.description + '</br>' +
+        info.food_type + '</div>' + '</br>' + '<a href="/trucks/'+info.id+'">Learn More</a>' + '</br>' +
         '<a href="https://www.google.com/maps/place/' + info.latitude + ',' + info.longitude + '&dirflg=w">Get Directions</a>';
         google.maps.event.addListener(marker, 'click', function () {
             infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);

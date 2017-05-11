@@ -71,6 +71,7 @@ angular.module('FoodTruckApp', ['ngRoute', 'satellizer', 'ui.router', 'satellize
 	})
 
 	// Show
+
 	.state('show', {
 		url: '/trucks/:id',
 		templateUrl: '../templates/trucks/show.html',
