@@ -45,5 +45,80 @@ function SignupController ($location, Account) {
 	var vm = this;
 	vm.new_user = {};
 
-	
+	vm.signup = function(){
+		Account
+		.signup(vm.new_user)
+		.then(
+			function(response){
+				vm.new_user = {};
+				$location.path('/trucks');
+			});
+	};
+
+	LogoutController.$inject = ['$location','Account'];
+	function LogoutController ($location,Account){
+		Account
+		.logout()
+		.then(function(){
+			$location.path('/trucks');
+		});
+	}
+//////////////
+// Services //
+//////////////
+
+Account.$inject = ["$http", "$q", "$auth"]; // minification protection
+function Account($http, $q, $auth) {
+  var self = this;
+  self.user = null;
+
+  self.signup = signup;
+  self.login = login;
+  self.logout = logout;
+  self.currentUser = currentUser;
+  self.getProfile = getProfile;
+  self.updateProfile = updateProfile;
+
+  function signup(userData) {
+    return (
+      $auth
+        .signup(userData) // signup (https://github.com/sahat/satellizer#authsignupuser-options)
+        .then(
+          function onSuccess(response) {
+            $auth.setToken(response.data.token); // set token (https://github.com/sahat/satellizer#authsettokentoken)
+          },
+
+          function onError(error) {
+            console.error(error);
+          }
+        )
+    );
+  }
+
+  function login(userData) {
+    return (
+      $auth
+        .login(userData) // login (https://github.com/sahat/satellizer#authloginuser-options)
+        .then(
+          function onSuccess(response) {
+            $auth.setToken(response.data.token); // set token (https://github.com/sahat/satellizer#authsettokentoken)
+          },
+
+          function onError(error) {
+            console.error(error);
+          }
+        )
+    );
+  }
+
+  function logout() {
+    return (
+      $auth
+        .logout() // delete token (https://github.com/sahat/satellizer#authlogout)
+        .then(function() {
+          self.user = null;
+        })
+    );
+  }
+  }
 }
