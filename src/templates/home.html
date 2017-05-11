@@ -1,10 +1,10 @@
-<section class="landing-page">
-  <div>
-    <h1>Welcome to Foodie Foodie Truck Truck</h1>
-    <div class="buttons">
-      <a href="#" class="btn btn-lg btn-primary landing-btn">I am a food truck</a>
-      <a href="#" class="btn btn-lg btn-success landing-btn">Current Addict</a>
-      <a href="#" class="btn btn-lg btn-warning landing-btn">New Addict</a>
-    </div>
+<div ng-controller="MapsController" class="map">
+
+  <div id="map"></div>
+  <button class="btn-success" ng-click="showme=true">Show Results</button>
+  <button class="btn-danger" ng-click="showme=false" ng-show="showme">Hide Results</button>
+
+  <div class="truckViews animate-show-hide" ng-repeat="marker in markers">
+    <a href="#" ng-click="openInfoWindow($event, marker)" ng-show="showme">{{marker.title}}</a>
   </div>
-</section>
+</div>
