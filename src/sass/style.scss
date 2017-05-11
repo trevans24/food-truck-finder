@@ -21,10 +21,70 @@ $width: 100%;
 }
 
 // ////////////END VARS AND MIXINS///////////////
+body {
+	margin-top: -20px;
+}
+// NAV BAR
+nav .container {
+	padding-bottom: -20px;
+}
+
+.navbar-default {
+	background-color: $primary;
+	// color: $fontColor;
+	font-family: $font;
+}
+
+.navbar-header {
+	background-color: $primary;
+}
+
+.navbar-collapse {
+	background-color: $primary;
+}
+
+.nav-text {
+	background-color: $primary;
+	color: $fontColor;
+	font-family: $font;
+	text-align: center;
+}
+
+.nav-text:hover {
+	opacity: .7;
+}
+// END NAV BAR //////////////////////
+
+//////////Main Landing Page///////////
+.landing-page {
+	background-color: $primary;
+	margin-top: -40px;
+	min-height: 600px;
+}
+
+.landing-page h1 {
+	color: $fontColor;
+	font-family: $font;
+	height: auto;
+	margin-left: 8%;
+	padding: 10%;
+	text-align: center;
+	width: 80%;
+}
+
+.buttons {
+	margin-left: 15%;
+}
+
+.landing-btn {
+	border-radius: 20px;
+	margin-top: 5%;
+	width: 80%;
+}
 
 // MAP
 #map {
-    height: 500px;
+    height: 525px;
     width: 100%;
 }
 
@@ -36,7 +96,9 @@ $width: 100%;
 // Div at top of page
 .heading {
 	background-color: $primary;
-	height: 100px;
+	border: 1px solid $primary;
+	height: 55px;
+	margin-top: -20px;
 }
 // Search Bar
 .input-group {
@@ -46,7 +108,7 @@ $width: 100%;
 	color: $fontColor;
 	font-family: $font;
 	height: 36px;
-	margin-top: 50px;
+	margin-top: 10px;
 	opacity: .8;
 	width: $width;
 }

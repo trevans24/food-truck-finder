@@ -39,25 +39,23 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">Foodie Truck Truck</a>
+        <a class="navbar-brand nav-text" href="/">Foodie Truck Truck</a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="/">Home</a></li>
+          <li><a class="nav-text" href="/">Home</a></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/signup">Sign Up</a></li>
-          <li><a href="/login">Log In</a></li>
-          <li><a href="/logout">Log Out</a></li>
+        <ul class="nav navbar-nav navbar-left">
+          <li><a class="nav-text" href="/signup">Sign Up</a></li>
+          <li><a class="nav-text" href="/login">Log In</a></li>
+          <li><a class="nav-text" href="/logout">Log Out</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-
-<div class="container-fluid heading">
+<!-- <div class="container-fluid heading">
   <input class="input-group" ng-model="searchText" placeholder="Search">
-  <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
 </div>
 
 <div ng-controller="MapsController">
@@ -69,9 +67,18 @@
     <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
 
   </div>
-</div>
+</div> -->
 
-
+<section class="landing-page">
+  <div>
+    <h1>Welcome to Foodie Foodie Truck Truck</h1>
+    <div class="buttons">
+      <a href="#" class="btn btn-lg btn-primary landing-btn">I am a food truck</a>
+      <a href="#" class="btn btn-lg btn-success landing-btn">Current Addict</a>
+      <a href="#" class="btn btn-lg btn-warning landing-btn">New Addict</a>
+    </div>
+  </div>
+</section>
 
 
 </body>
