@@ -66,8 +66,6 @@ function Account($http, $q, $auth) {
   self.login = login;
   self.logout = logout;
   self.currentUser = currentUser;
-  self.getProfile = getProfile;
-  self.updateProfile = updateProfile;
 
   function signup(userData) {
     return $auth.signup(userData) // signup (https://github.com/sahat/satellizer#authsignupuser-options)

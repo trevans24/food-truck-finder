@@ -22,7 +22,7 @@ $width: 100%;
 
 // ////////////END VARS AND MIXINS///////////////
 body {
-	margin-top: -20px;
+	// margin-top: -20px;
 }
 // NAV BAR
 nav {
@@ -33,6 +33,7 @@ nav {
 	background-color: $primary;
 	font-family: $font;
 	margin-bottom: -15%;
+	z-index: auto;
 }
 
 .navbar-header {
@@ -57,6 +58,31 @@ a .navbar-brand .nav-text {
 
 .nav-text:hover {
 	opacity: .7;
+}
+
+.nav .navbar-nav .navbar-left li:hover {
+	opacity: .7;
+}
+// Search Bar
+.form {
+	margin: 3% 0 3% 25%;
+	text-align: right;
+	width: 50%;
+}
+
+.input-group {
+	background-color: $secondary;
+	border: 2px solid white;
+	border-radius: 20px;
+	color: $fontColor !important;
+	font-family: $font;
+	opacity: .8;
+	width: 60%;
+}
+
+.fa-search {
+	margin:2.5% 25% 0 0;
+	opacity: .6;
 }
 // END NAV BAR //////////////////////
 
@@ -106,6 +132,7 @@ a .navbar-brand .nav-text {
 
 .map {
 	margin-top: -7%;
+	// z-index: -1;
 }
 
 .infoWindowContent {
@@ -113,30 +140,6 @@ a .navbar-brand .nav-text {
     border-top: 1px solid $borderColor;
     padding-top: 10px;
 }
-// Search Bar
-.form {
-	margin: 3% 0 3% 25%;
-	text-align: right;
-	width: 50%;
-}
-
-.input-group {
-	background-color: $secondary;
-	border: 2px solid white;
-	border-radius: 20px;
-	color: $fontColor !important;
-	font-family: $font;
-	// height: 36px;
-	opacity: .8;
-	// text-align: right;
-	width: 60%;
-}
-
-.fa-search {
-	margin:2.5% 25% 0 0;
-	opacity: .6;
-}
-
 // TRUCK CARD START/////////////////////////////
 // truck card overall shape
 .card {
