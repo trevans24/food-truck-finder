@@ -6,6 +6,10 @@ function MapsController($scope, $http) {
     var self = this;
     $scope.trucks = [];
     self.getTrucks = getTrucks;
+<<<<<<< HEAD
+    // self.calcRoute = calcRoute;
+=======
+>>>>>>> master
 
     initMap();
     getTrucks();
@@ -36,7 +40,11 @@ function MapsController($scope, $http) {
             position: new google.maps.LatLng(info.latitude, info.longitude),
             title: info.name
         });
+<<<<<<< HEAD
+        marker.content = '<div class="infoWindowContent">' + 'Category: ' + info.food_type + '</div>' + '</br>' + info.description + '</br>' + '<a href="https://www.google.com/maps/place/' + info.latitude + ',' + info.longitude + '&dirflg=w">Get Directions</a>';
+=======
         marker.content = '<div class="infoWindowContent">' + 'Category: ' + info.food_type + '</div>' + '</br>' + '<a href="/trucks/' + info.id + '">Learn More</a>' + '</br>' + '<a href="https://www.google.com/maps/place/' + info.latitude + ',' + info.longitude + '&dirflg=w">Get Directions</a>';
+>>>>>>> master
         google.maps.event.addListener(marker, 'click', function () {
             infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
             infoWindow.open($scope.map, marker);

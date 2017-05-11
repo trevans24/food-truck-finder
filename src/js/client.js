@@ -1,7 +1,19 @@
 console.log('Client Sided Controller');
 
+<<<<<<< HEAD
+angular.module('FoodTruckApp', ['ngRoute', 'ui.router', 'satellizer'])
+	.config(configRoutes);
+
+////////////
+// ROUTES //
+////////////
+
+configRoutes.$inject = ['$stateProvider', '$urlProvider', '$locationProvider'];
+	function configRoutes ($stateProvier, $urlRouterProvider, $locationProvider) {
+=======
 angular.module('FoodTruckApp', ['ngRoute', 'ui.router',])
 	.config(($routeProvider, $locationProvider, $stateProvier, $urlRouterProvider)=>{
+>>>>>>> master
 		// using HTML 5 for location templates
 		$locationProvider.html5Mode({
 			enabled: true,
@@ -14,12 +26,52 @@ angular.module('FoodTruckApp', ['ngRoute', 'ui.router',])
 		$stateProvier
 			// Main Routes
 			// HOME
+<<<<<<< HEAD
+			.state('home', {
+				url: '/',
+				templateUrl: 'templates/home.html',
+				controller: 'MainController',
+				controllerAs: 'main'
+			})
+			// SIGNUP
+			.state('signup', {
+				url: '/signup',
+				template: '<h1>Ninja Turtles</h1>',
+				// templateUrl: 'templates/signup.html',
+				controller: 'SignupController',
+				controllerAs: 'signup',
+				resolve: {
+					skipIfLoggedIn: skipIfLoggedIn
+				}
+			})
+			// LOGIN
+			.state('login', {
+				url: '/login',
+				templateUrl: '../templates/login.html',
+				controller: 'LoginController',
+				controllerAs: 'login',
+				resolve: {
+					skipIfLoggedIn: skipIfLoggedIn
+				}
+			})
+			// LOGOUT
+			.state('logout', {
+				url: '/logout',
+				template: null,
+				controller: 'LogoutController',
+				controllerAs: 'logout',
+				resolve: {
+					loginRequired: loginRequired
+				}
+			})
+=======
 			// .state('home', {
 			// 	url: '/',
 			// 	templateUrl: 'templates/index.html',
 			// 	controller: 'MainController',
 			// 	controllerAs: 'main'
 			// })
+>>>>>>> master
 			// ABOUT PAGE
 			.state('about', {
 				url: '/about',
@@ -106,4 +158,32 @@ angular.module('FoodTruckApp', ['ngRoute', 'ui.router',])
 			// 	resolve: {
 			// 		skipIfLoggedIn: skipIfLoggedIn
 			// 	}
+<<<<<<< HEAD
+			// });
+
+// skipped if logged in user
+			function skipIfLoggedIn($q, $auth) {
+				var deferred = $q.defer();
+				if ($auth.isAuthenticated()) {
+					deferred.refect();
+				} else {
+					deferred.resolve();
+				}
+				return deferred.promise;
+			}
+
+// user must login
+			function logininRequired($q, $location, $auth) {
+				var deferred = $q.defer();
+				if ($auth.isAuthenticated()) {
+					deferred.resolve();
+				} else {
+					$location.path('/login');
+				}
+				return deferred.promise;
+			}
+
+	}
+=======
 			});
+>>>>>>> master
