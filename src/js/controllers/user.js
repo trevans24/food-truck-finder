@@ -54,15 +54,17 @@ function SignupController ($location, Account) {
         $location.path('/trucks');
       });
   };
+}
 
-  LogoutController.$inject = ['$location','Account'];
-  function LogoutController ($location,Account){
-    Account
-    .logout()
-    .then(function(){
-      $location.path('/trucks');
-    });
-  }
+// LOGOUT
+LogoutController.$inject = ['$location','Account'];
+function LogoutController ($location,Account){
+  Account
+  .logout()
+  .then(function(){
+    $location.path('/trucks');
+  });
+}
 //////////////
 // Services //
 //////////////
@@ -119,6 +121,5 @@ function Account($http, $q, $auth) {
           self.user = null;
         })
     );
-  }
   }
 }
