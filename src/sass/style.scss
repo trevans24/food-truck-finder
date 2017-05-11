@@ -110,7 +110,13 @@ nav .container {
 	height: 36px;
 	margin-top: 10px;
 	opacity: .8;
+	text-align: right;
 	width: $width;
+}
+
+.fa-search {
+	opacity: .6;
+	padding: 3% 12% 0 0 ;
 }
 
 // TRUCK CARD START/////////////////////////////
