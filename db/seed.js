@@ -3,7 +3,7 @@
 const  DB = require('../models').models;
 
 
-
+console.log('test');
 
 // const truckCreate = function(){
 // 	return DB.Trucks.create(
