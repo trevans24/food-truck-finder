@@ -19,7 +19,6 @@ function MapsController($scope, $http) {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
-
             console.log(pos.lat + " position");
             userPos(pos);
 
@@ -30,10 +29,6 @@ function MapsController($scope, $http) {
 
                 });
             }
-            // infoWindow.setPosition(pos);
-            //   infoWindow.setContent('Location found.');
-            //   infoWindow.open(map);
-            //   map.setCenter(pos);
         });
     } else {
         console.log('Geolocation is not supported for this Browser/OS.');
@@ -69,7 +64,8 @@ function MapsController($scope, $http) {
     };
     $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
     var infoWindow = new google.maps.InfoWindow();
-    var createMarker = function createMarker(info) {
+
+    function createMarker(info) {
         var image = "../images/icons/foodTruck.png";
         console.log("Creating  marker " + info);
         console.log($scope.map);
@@ -85,7 +81,7 @@ function MapsController($scope, $http) {
             infoWindow.open($scope.map, marker);
         });
         $scope.markers.push(marker);
-    };
+    }
     $scope.openInfoWindow = function (e, selectedMarker) {
         e.preventDefault();
         google.maps.event.trigger(selectedMarker, 'click');
