@@ -42,7 +42,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand nav-text" href="/">Foodie Truck Truck</a>
+        <a class="navbar-brand nav-text" href="/">FFTT</a>
+      </div>
+      <div class="container-fluid heading form-group has-feedback">
+        <input class="input-group" ng-model="searchText" placeholder="Search       ">
+        <span class='fa fa-search form-control-feedback' aria-hidden='true'></span>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
@@ -54,13 +58,10 @@
           <li><a class="nav-text" href="/logout">Log Out</a></li>
         </ul>
       </div>
-    </div>
+    </div> 
   </nav>
 
-<div class="container-fluid heading form-group has-feedback">
-  <input class="input-group" ng-model="searchText" placeholder="Search       ">
-  <span class='fa fa-search form-control-feedback' aria-hidden='true'></span>
-</div>
+
 
 <div ng-controller="MapsController">
 
