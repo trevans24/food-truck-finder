@@ -16,7 +16,7 @@ angular.module('FoodTruckApp', ['satellizer'])
 MainController.$inject = ['Account'];
 function MainController(Account) {
   var vm = this;
-
+  console.log('main controller');
   vm.currentUser = function() {
     return Account.currentUser();
   };
@@ -28,7 +28,7 @@ LoginController.$inject = ['$location', 'Account'];
 function LoginController($location, Account) {
   var vm = this;
   vm.new_user = {};
-
+  console.log('login controller');
   vm.login = function() {
     Account
     .login(vm.new_user)
@@ -44,7 +44,7 @@ SignupController.$inject = ['$location', 'Account'];
 function SignupController ($location, Account) {
   var vm = this;
   vm.new_user = {};
-
+  console.log('signup controller');
   vm.signup = function(){
     Account
     .signup(vm.new_user)
@@ -59,6 +59,7 @@ function SignupController ($location, Account) {
 // LOGOUT
 LogoutController.$inject = ['$location','Account'];
 function LogoutController ($location,Account){
+  console.log('logout controller');
   Account
   .logout()
   .then(function(){
@@ -77,11 +78,12 @@ function Account($http, $q, $auth) {
   self.signup = signup;
   self.login = login;
   self.logout = logout;
-  self.currentUser = currentUser;
+  // self.currentUser = currentUser;
   self.getProfile = getProfile;
   self.updateProfile = updateProfile;
 
   function signup(userData) {
+    console.log('signup function');
     return (
       $auth
         .signup(userData) // signup (https://github.com/sahat/satellizer#authsignupuser-options)
@@ -98,6 +100,7 @@ function Account($http, $q, $auth) {
   }
 
   function login(userData) {
+    console.log('login function');
     return (
       $auth
         .login(userData) // login (https://github.com/sahat/satellizer#authloginuser-options)
@@ -114,6 +117,7 @@ function Account($http, $q, $auth) {
   }
 
   function logout() {
+    console.log('logout function');
     return (
       $auth
         .logout() // delete token (https://github.com/sahat/satellizer#authlogout)
@@ -129,6 +133,7 @@ function Account($http, $q, $auth) {
   }
 
   function updateProfile() {
+    console.log('update profile function');
     return (
       $http
       .put('/api/me', profileData)

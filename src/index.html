@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head ng-app="FoodTruckApp" >
 	<meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <base href="/">
+  <!-- <base href="/"> -->
 	<title>Welcome to FFTT</title>
 	<!-- css stylesheets -->
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -17,13 +17,13 @@
 	<!-- bootstrap -->
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <!-- satellizer -->
-  <script src="https://cdn.jsdelivr.net/satellizer/0.14.1/satellizer.min.js"></script>
   <!-- font -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 	<!-- angular -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-route.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <!-- satellizer -->
+  <script src="https://cdn.jsdelivr.net/satellizer/0.14.1/satellizer.min.js"></script>
   <!-- map js file -->
   <script src="/js/map.js"></script>
   <!-- client side js -->
@@ -33,8 +33,8 @@
   <script src="/js/controllers/user.js"></script>
 <!--   <script src="/js/controllers/favorites.js"></script> -->
 </head>
-<body ng-app="mapsApp">
-  <nav class="navbar navbar-default">
+<body ng-controller="MapsController">
+  <nav class="navbar navbar-default" ng-controller="MainController as main">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -67,7 +67,7 @@
   </div>
   
 
-<!-- <div ng-controller="MapsController" class="map">
+<div ng-app="mapsApp" class="map">
 
   <div id="map"></div>
   <button class="btn-success" ng-click="showme=true">Show Results</button>
@@ -76,7 +76,7 @@
     <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
 
   </div>
-</div> -->
+</div>
 
 
 

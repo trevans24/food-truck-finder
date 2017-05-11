@@ -5,7 +5,7 @@ function MapsController($scope, $http) {
     var self = this;
     self.trucks = [];
     self.getTrucks = getTrucks;
-    self.calcRoute = calcRoute;
+    // self.calcRoute = calcRoute;
 
     initMap();
     getTrucks();

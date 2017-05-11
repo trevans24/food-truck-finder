@@ -2,7 +2,14 @@
 
 console.log('Client Sided Controller');
 
-angular.module('FoodTruckApp', ['ngRoute', 'satellizer', 'ui.router', 'satellizer']).config(function ($routeProvider, $locationProvider, $stateProvier, $urlRouterProvider, satellizer) {
+angular.module('FoodTruckApp', ['ngRoute', 'ui.router', 'satellizer']).config(configRoutes);
+
+////////////
+// ROUTES //
+////////////
+
+configRoutes.$inject = ['$stateProvider', '$urlProvider', '$locationProvider'];
+function configRoutes($stateProvier, $urlRouterProvider, $locationProvider) {
 	// using HTML 5 for location templates
 	$locationProvider.html5Mode({
 		enabled: true,
@@ -24,7 +31,8 @@ angular.module('FoodTruckApp', ['ngRoute', 'satellizer', 'ui.router', 'satellize
 	// SIGNUP
 	.state('signup', {
 		url: '/signup',
-		templateUrl: 'templates/signup.html',
+		template: '<h1>Ninja Turtles</h1>',
+		// templateUrl: 'templates/signup.html',
 		controller: 'SignupController',
 		controllerAs: 'signup',
 		resolve: {
@@ -159,4 +167,4 @@ angular.module('FoodTruckApp', ['ngRoute', 'satellizer', 'ui.router', 'satellize
 		}
 		return deferred.promise;
 	}
-});
+}
