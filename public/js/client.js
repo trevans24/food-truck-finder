@@ -53,7 +53,7 @@ angular.module('FoodTruckApp', ['ngRoute', 'satellizer']).config(function ($rout
 
 	// Show
 	.when('/trucks/:id', {
-		templateUrl: '../templates/trucks/show.html',
+		templateUrl: '<h1>This is not a test</h1>',
 		controller: 'TruckShowController as truckController'
 	})
 

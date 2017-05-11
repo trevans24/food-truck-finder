@@ -22,7 +22,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 	<!-- angular -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/X.Y.Z/angular-route.js"></script>
+
   <!-- map js file -->
   <script src="/js/map.js"></script>
   <!-- client side js -->
@@ -68,10 +68,9 @@
   <div id="map"></div>
   <button class="btn-success" ng-click="showme=true">Show Results</button>
   <button class="btn-danger" ng-click="showme=false" ng-show="showme">Hide Results</button>
-  <div class="truckViews animate-show-hide" ng-repeat="marker in markers | filter:searchText" ng-show="showme">
-    <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
-
-  </div>
+  <div class="truckViews animate-show-hide" ng-repeat="marker in markers">
+    <a href="#" ng-click="openInfoWindow($event, marker)" ng-show="showme">{{marker.title}}</a>
+</div>
 </div>
 
 
