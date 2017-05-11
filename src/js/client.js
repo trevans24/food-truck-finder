@@ -35,7 +35,7 @@ angular.module('FoodTruckApp', ['ngRoute', 'satellizer', 'ui.router', 'satellize
 				url: '/login',
 				templateUrl: '../templates/login.html',
 				controller: 'LoginController',
-				controllerAs: 'login'
+				controllerAs: 'login',
 				resolve: {
 					skipIfLoggedIn: skipIfLoggedIn
 				}
@@ -43,9 +43,9 @@ angular.module('FoodTruckApp', ['ngRoute', 'satellizer', 'ui.router', 'satellize
 			// LOGOUT
 			.state('logout', {
 				url: '/logout',
-				template: null
+				template: null,
 				controller: 'LogoutController',
-				controllerAs: 'logout'
+				controllerAs: 'logout',
 				resolve: {
 					loginRequired: loginRequired
 				}
