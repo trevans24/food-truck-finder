@@ -13,6 +13,11 @@ $font: 'Roboto', sans-serif;
 // Container/Div Sizing the entire window
 $width: 100%;
 
+.truckViews{
+	z-index: 30;
+	bottom: 200px;
+	position: relative;
+}
 
 #displayResults {
 	margin: 0 auto;
