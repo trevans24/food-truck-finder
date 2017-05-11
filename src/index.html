@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head ng-app="FoodTruckApp" >
+<head>
 	<meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,28 +20,17 @@
   <!-- font -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 	<!-- angular -->
-<<<<<<< HEAD
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
   <script src="bower_components/angular-route/angular-route.min.js"></script>
-  <!-- satellizer -->
-  <script src="https://cdn.jsdelivr.net/satellizer/0.14.1/satellizer.min.js"></script>
-=======
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-  <!-- satellizer -->
-  <script src="https://cdn.jsdelivr.net/satellizer/0.14.1/satellizer.min.js"></script>
-
->>>>>>> master
   <!-- map js file -->
   <script src="/js/map.js"></script>
   <!-- client side js -->
   <script src="/js/client.js"></script> 
   <!-- controllers -->
   <script src="/js/controllers/trucks.js"></script>
-  <!-- <script src="/js/controllers/user.js"></script> -->
-<!--   <script src="/js/controllers/favorites.js"></script> -->
 </head>
-<body ng-controller="MapsController">
-  <nav class="navbar navbar-default" ng-controller="MainController as main">
+<body ng-app="mapsApp">
+  <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -68,32 +57,19 @@
       </div>
     </div> 
   </nav>
-  
-  <div class="container">
-    <ui-view>
-  </div>
-  
 
-<<<<<<< HEAD
-<div ng-app="mapsApp" class="map">
-=======
 <div ng-controller="MapsController" class="map">
->>>>>>> master
 
   <div id="map"></div>
   <button class="btn-success" ng-click="showme=true">Show Results</button>
   <button class="btn-danger" ng-click="showme=false" ng-show="showme">Hide Results</button>
 
-<<<<<<< HEAD
-  </div>
-</div>
-=======
   <div class="truckViews animate-show-hide" ng-repeat="marker in markers">
     <a href="#" ng-click="openInfoWindow($event, marker)" ng-show="showme">{{marker.title}}</a>
-</div>
+  </div>
 </div>
 
->>>>>>> master
+
 
 
 

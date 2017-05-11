@@ -5,10 +5,6 @@ function MapsController($scope, $http) {
     var self = this;
     $scope.trucks = [];
     self.getTrucks = getTrucks;
-<<<<<<< HEAD
-    // self.calcRoute = calcRoute;
-=======
->>>>>>> master
 
     initMap();
     getTrucks();
