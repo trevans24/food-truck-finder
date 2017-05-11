@@ -1,5 +1,6 @@
 console.log('Client Sided Controller');
 
+<<<<<<< HEAD
 angular.module('FoodTruckApp', ['ngRoute', 'ui.router', 'satellizer'])
 	.config(configRoutes);
 
@@ -9,6 +10,10 @@ angular.module('FoodTruckApp', ['ngRoute', 'ui.router', 'satellizer'])
 
 configRoutes.$inject = ['$stateProvider', '$urlProvider', '$locationProvider'];
 	function configRoutes ($stateProvier, $urlRouterProvider, $locationProvider) {
+=======
+angular.module('FoodTruckApp', ['ngRoute', 'ui.router',])
+	.config(($routeProvider, $locationProvider, $stateProvier, $urlRouterProvider)=>{
+>>>>>>> master
 		// using HTML 5 for location templates
 		$locationProvider.html5Mode({
 			enabled: true,
@@ -21,6 +26,7 @@ configRoutes.$inject = ['$stateProvider', '$urlProvider', '$locationProvider'];
 		$stateProvier
 			// Main Routes
 			// HOME
+<<<<<<< HEAD
 			.state('home', {
 				url: '/',
 				templateUrl: 'templates/home.html',
@@ -58,6 +64,14 @@ configRoutes.$inject = ['$stateProvider', '$urlProvider', '$locationProvider'];
 					loginRequired: loginRequired
 				}
 			})
+=======
+			// .state('home', {
+			// 	url: '/',
+			// 	templateUrl: 'templates/index.html',
+			// 	controller: 'MainController',
+			// 	controllerAs: 'main'
+			// })
+>>>>>>> master
 			// ABOUT PAGE
 			.state('about', {
 				url: '/about',
@@ -78,6 +92,7 @@ configRoutes.$inject = ['$stateProvider', '$urlProvider', '$locationProvider'];
 			})
 
 			// Show
+
 			.state('show', {
 				url: '/trucks/:id',
 				templateUrl: '../templates/trucks/show.html',
@@ -143,6 +158,7 @@ configRoutes.$inject = ['$stateProvider', '$urlProvider', '$locationProvider'];
 			// 	resolve: {
 			// 		skipIfLoggedIn: skipIfLoggedIn
 			// 	}
+<<<<<<< HEAD
 			// });
 
 // skipped if logged in user
@@ -168,3 +184,6 @@ configRoutes.$inject = ['$stateProvider', '$urlProvider', '$locationProvider'];
 			}
 
 	}
+=======
+			});
+>>>>>>> master
