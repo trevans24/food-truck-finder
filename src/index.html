@@ -57,21 +57,7 @@
     </div> 
   </nav>
 
-<div ng-controller="MapsController" class="map">
-
-  <div id="map"></div>
-  <button class="btn-success" ng-click="showme=true">Show Results</button>
-  <button class="btn-danger" ng-click="showme=false" ng-show="showme">Hide Results</button>
-
-  <div class="truckViews animate-show-hide" ng-repeat="marker in markers">
-    <a href="#" ng-click="openInfoWindow($event, marker)" ng-show="showme">{{marker.title}}</a>
-  </div>
-</div>
-
-
-
-
-
+<ng-view></ng-view>
 
 </body>
 <script>

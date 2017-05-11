@@ -2,7 +2,7 @@
 
 console.log("Trucks Controller!!");
 // ANGULAR CONTROLLERS TO USE, INDEX, SHOW, POST, PUT
-angular.module('FoodTruckApp').controller('TruckIndexController', TruckIndexController).controller('TruckShowController', TruckShowController).controller('TruckNewController', TruckNewController).controller('TruckEditController', TruckEditController);
+angular.module('mapsApp').controller('TruckIndexController', TruckIndexController).controller('TruckShowController', TruckShowController).controller('TruckNewController', TruckNewController).controller('TruckEditController', TruckEditController);
 
 // INDEX CONTROLLER
 TruckIndexController.$inject = ['$http'];
