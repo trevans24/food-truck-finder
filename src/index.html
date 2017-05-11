@@ -27,6 +27,7 @@
   <script src="/js/client.js"></script> 
   <!-- controllers -->
   <script src="/js/controllers/trucks.js"></script>
+  <script src="/js/controllers/users.js"></script>
 <!--   <script src="/js/controllers/favorites.js"></script> -->
 </head>
 <body ng-app="mapsApp">
@@ -39,40 +40,35 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">Foodie Truck Truck</a>
+        <a class="navbar-brand nav-text" href="/">Foodie Truck Truck</a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="/">Home</a></li>
+          <li><a class="nav-text" href="/">Home</a></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/signup">Sign Up</a></li>
-          <li><a href="/login">Log In</a></li>
-          <li><a href="/logout">Log Out</a></li>
+        <ul class="nav navbar-nav navbar-left">
+          <li><a class="nav-text" href="/signup">Sign Up</a></li>
+          <li><a class="nav-text" href="/login">Log In</a></li>
+          <li><a class="nav-text" href="/logout">Log Out</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-
 <div class="container-fluid heading">
   <input class="input-group" ng-model="searchText" placeholder="Search">
-  <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
 </div>
 
 <div ng-controller="MapsController">
 
-    <div id="map"></div>
+  <div id="map"></div>
   <button class="btn-success" ng-click="showme=true">Show Results</button>
   <button class="btn-danger" ng-click="showme=false" ng-show="showme">Hide Results</button>
-	<div class="truckViews animate-show-hide" ng-repeat="marker in markers | filter:searchText" ng-show="showme">
+  <div class="truckViews animate-show-hide" ng-repeat="marker in markers | filter:searchText" ng-show="showme">
     <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
 
   </div>
 </div>
-
-
-
 
 </body>
 <script>
