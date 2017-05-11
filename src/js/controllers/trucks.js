@@ -1,4 +1,4 @@
-	console.log("Trucks Controller!!");
+ 	console.log("Trucks Controller!!");
 // ANGULAR CONTROLLERS TO USE, INDEX, SHOW, POST, PUT
 angular.module('FoodTruckApp')
 	.controller('TruckIndexController', TruckIndexController)
