@@ -21,13 +21,4 @@ router.delete('/api/trucks/:id', trucksController.destroy);
 /// UPDATE
 router.put('/api/trucks/:id', trucksController.update);
 
-// SATELLIZER ROUTES
-
-// SIGNUP
-
-// LOGIN
-
-// LOGOUT
-
-
 module.exports = router;
