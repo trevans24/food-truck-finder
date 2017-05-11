@@ -1,8 +1,9 @@
-var express = require('express');
-var app = express();
-var router = express.Router();
-var trucksRouter = require('./config/routes.js');
-var bodyParser = require('body-parser');
+var express = require('express'),
+	app = express(),
+	router = express.Router(),
+	trucksRouter = require('./config/routes.js'),
+	bodyParser = require('body-parser'),
+	auth = require('./resources/auth.js');
 
 
 /// For Backend Controllers

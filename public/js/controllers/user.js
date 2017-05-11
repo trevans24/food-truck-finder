@@ -66,6 +66,8 @@ function Account($http, $q, $auth) {
   self.login = login;
   self.logout = logout;
   self.currentUser = currentUser;
+  self.getProfile = getProfile;
+  self.updateProfile = updateProfile;
 
   function signup(userData) {
     return $auth.signup(userData) // signup (https://github.com/sahat/satellizer#authsignupuser-options)
@@ -89,6 +91,16 @@ function Account($http, $q, $auth) {
     return $auth.logout() // delete token (https://github.com/sahat/satellizer#authlogout)
     .then(function () {
       self.user = null;
+    });
+  }
+
+  function getProfile() {
+    return $http.get('/api/me');
+  }
+
+  function updateProfile() {
+    return $http.put('/api/me', profileData).then(function (res) {
+      self.user = res.data;
     });
   }
 }
