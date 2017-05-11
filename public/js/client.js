@@ -18,7 +18,7 @@ angular.module('FoodTruckApp', ['ngRoute', 'satellizer']).config(function ($rout
 	// SIGNUP
 	.when('/signup', {
 		templateUrl: '../templates/signup.html',
-		conroller: 'SignUpController as signin',
+		conroller: 'SignUpController as signup',
 		resolve: {
 			skipIfLoggedIn: skipIfLoggedIn
 		}
@@ -154,7 +154,7 @@ function SignupController($location, Account) {
 	LogoutController.$inject = ['$location', 'Account'];
 	function LogoutController($location, Account) {
 		Account.logout().then(function () {
-			$location.path('/trucks');
+			$location.path('/');
 		});
 	}
 	//////////////
