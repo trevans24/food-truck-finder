@@ -34,7 +34,7 @@
 </head>
 <body ng-app="mapsApp">
   <nav class="navbar navbar-default">
-    <div class="container">
+    <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
@@ -43,10 +43,10 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand nav-text" href="/">FFTT</a>
-      </div>
-      <div class="container-fluid heading form-group has-feedback">
-        <input class="input-group" ng-model="searchText" placeholder="Search       ">
-        <span class='fa fa-search form-control-feedback' aria-hidden='true'></span>
+        <form class="form">
+          <input class="input-group form-control mr-sm-0 text-right" ng-model="searchText" placeholder="Search    ">
+          <span class='fa fa-search form-control-feedback' aria-hidden='true'></span>
+        </form>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
@@ -63,7 +63,7 @@
 
 
 
-<div ng-controller="MapsController">
+<div ng-controller="MapsController" class="map">
 
   <div id="map"></div>
   <button class="btn-success" ng-click="showme=true">Show Results</button>
