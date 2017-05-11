@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
 	<title>Welcome to FFTT</title>
 	<!-- css stylesheets -->
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -53,17 +54,20 @@
           <li><a class="nav-text" href="/">Home</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-left">
-          <li><a class="nav-text" href="/signup">Sign Up</a></li>
-          <li><a class="nav-text" href="/login">Log In</a></li>
-          <li><a class="nav-text" href="/logout">Log Out</a></li>
+          <li><a class="nav-text" ui-sref="signup">Sign Up</a></li>
+          <li><a class="nav-text" ui-sref="login">Log In</a></li>
+          <li><a class="nav-text" ui-sref="logout">Log Out</a></li>
         </ul>
       </div>
     </div> 
   </nav>
+  
+  <div class="container">
+    <ui-view>
+  </div>
+  
 
-
-
-<div ng-controller="MapsController" class="map">
+<!-- <div ng-controller="MapsController" class="map">
 
   <div id="map"></div>
   <button class="btn-success" ng-click="showme=true">Show Results</button>
@@ -72,7 +76,7 @@
     <a href="#" ng-click="openInfoWindow($event, marker)">{{marker.title}}</a>
 
   </div>
-</div>
+</div> -->
 
 
 

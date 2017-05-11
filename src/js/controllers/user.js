@@ -119,7 +119,24 @@ function Account($http, $q, $auth) {
         .logout() // delete token (https://github.com/sahat/satellizer#authlogout)
         .then(function() {
           self.user = null;
-        })
+        }
+      )
+    );
+  }
+
+  function getProfile() {
+    return $http.get('/api/me');
+  }
+
+  function updateProfile() {
+    return (
+      $http
+      .put('/api/me', profileData)
+      .then(
+        function (res) {
+          self.user = res.data;
+        }
+      )
     );
   }
 }

@@ -1,4 +1,3 @@
-
 'use strict';
 angular.module('mapsApp', []).controller('MapsController', MapsController);
 MapsController.$inject = ['$scope', '$http'];

@@ -93,4 +93,14 @@ function Account($http, $q, $auth) {
       self.user = null;
     });
   }
+
+  function getProfile() {
+    return $http.get('/api/me');
+  }
+
+  function updateProfile() {
+    return $http.put('/api/me', profileData).then(function (res) {
+      self.user = res.data;
+    });
+  }
 }
