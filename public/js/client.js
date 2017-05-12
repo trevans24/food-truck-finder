@@ -29,7 +29,7 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         controller: 'TruckShowController'
     })
     // New
-    .when('/trucks', {
+    .when('/owner', {
         templateUrl: '../templates/trucks/new.html',
         controller: 'TruckNewController'
     });
