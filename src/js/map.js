@@ -57,7 +57,7 @@ function MapsController($scope, $http) {
         }
     }
     var mapOptions = {
-        zoom: 13,
+        zoom: 5,
         center: new google.maps.LatLng(39.74, -104.99),
         mapTypeId: google.maps.MapTypeId.TERRAIN
     };
