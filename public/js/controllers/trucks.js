@@ -49,25 +49,45 @@ function TruckShowController($http, $location, $routeParams, $scope) {
 			$scope.truck = res.data;
 		});
 	}
-
 	getOneTruck();
 }
 
 // NEW CONTROLLER
-TruckNewController.$inject = ['$http', '$location'];
+TruckNewController.$inject = ['$http', '$location', '$scope'];
 // Match Injections
-function TruckNewController($http, $location) {
+function TruckNewController($http, $location, $scope) {
 	// ViewModel is equal to this
 	var vm = this;
-	vm.saveTruck = saveTruck;
+	$scope.pos = [];
+	$scope.newTruck = {};
 
+	$scope.saveTruck = saveTruck;
+	$scope.getLocation = getLocation;
+
+	getLocation();
 	// POST the new truck added to the DB
 	function saveTruck() {
-		console.log(vm.newTruck);
-		$http.post('/api/trucks', vm.newTruck).then(function (res) {
+		console.log(" hye");
+		$http
+		.post('/api/trucks', $scope.newTruck)
+		.then(function (res) {
 			var newTruck = res.data;
-			$location.path('/trucks/' + truck.id);
+			console.log(res.data);
+			$location.path('/trucks/' + newTruck.id);
 		});
+	}
+	function getLocation(){
+        navigator.geolocation.getCurrentPosition(function (position) {
+        var pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+        	};
+        	document.getElementById('longitude').value = pos.lat;
+        	document.getElementById('latitude').value = pos.lng;
+        	
+        	$scope.pos = pos;
+    	});
+
 	}
 }
 
