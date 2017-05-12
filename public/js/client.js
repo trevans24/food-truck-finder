@@ -2,11 +2,9 @@
 
 // console.log('Client Sided Controller');
 
-var app = angular.module('mapsApp', ['ngRoute']).controller('MapsController', MapsController).controller('TruckIndexController', TruckIndexController);
-
+var app = angular.module('mapsApp', ['ngRoute']).controller('MapsController', MapsController).controller('TruckIndexController', TruckIndexController).controller('TruckShowController', TruckShowController);
 // using HTML 5 for location templates
-
-app.config(function ($routeProvider, $locationProvider) {
+app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider
     // Main Routes
     .when('/', {
@@ -17,26 +15,22 @@ app.config(function ($routeProvider, $locationProvider) {
     .when('/about', {
         templateUrl: '../templates/about.html'
     })
-
     // Truck Routes
     // Index
     .when('/trucks', {
         templateUrl: '../templates/trucks/index.html',
         controller: 'TruckIndexController'
     })
-
     // Show
     .when('/trucks/:id', {
         templateUrl: '../templates/trucks/show.html',
         controller: 'TruckShowController'
     })
-
     // New
     .when('/trucks', {
         templateUrl: '../templates/trucks/new.html',
         controller: 'TruckNewController'
     })
-
     // Edit
     .when('/trucks/:id', {
         templateUrl: '../templates/trucks/edit.html',
@@ -46,11 +40,9 @@ app.config(function ($routeProvider, $locationProvider) {
         enabled: true,
         requireBase: false
     });
-});
-
+}]);
 console.log('Angular Working');
 // Controllers
-
 // INDEX CONTROLLER
 TruckIndexController.$inject = ['$http', '$scope'];
 // Match Injection
@@ -62,6 +54,12 @@ function TruckIndexController($http, $scope) {
     });
 }
 
+// SHOW CONTROLLER
+TruckShowController.$inject = ['$http', '$routeParams'];
+function TruckShowController($http, $routeParams) {
+    console.log("$routeParams", $routeParams.id);
+    console.log("SHOWING TRUCKS");
+}
 // MAPS CONTROLLER FOR TESTING
 MapsController.$inject = ['$scope', '$http'];
 function MapsController($scope, $http) {
@@ -82,12 +80,10 @@ function MapsController($scope, $http) {
             console.log(pos.lat + " " + pos.lng);
             panTo(pos);
             userPos(pos);
-
             function userPos(pos) {
                 var marker = new google.maps.Marker({
                     map: $scope.map,
                     position: new google.maps.LatLng(pos.lat, pos.lng)
-
                 });
             }
             function panTo(pos) {
@@ -112,7 +108,6 @@ function MapsController($scope, $http) {
     } else {
         console.log('Geolocation is not supported for this Browser/OS.');
     }
-
     // Allows user to filter the displayed results on the map
     function filterTrucks(category) {
         for (var i = 0; i < $scope.markers.length; i++) {
@@ -141,6 +136,7 @@ function MapsController($scope, $http) {
             position: new google.maps.LatLng(info.latitude, info.longitude),
             title: info.name
         });
+        console.log(info.id);
         marker.content = '<div class="infoWindowContent">' + 'Category: ' + info.food_type + '</div>' + '</br>' + '<a href="/trucks/' + info.id + '">Learn More</a>' + '</br>' + '<a href="https://www.google.com/maps/place/' + info.latitude + ',' + info.longitude + '&dirflg=w">Get Directions</a>';
         google.maps.event.addListener(marker, 'click', function () {
             infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);

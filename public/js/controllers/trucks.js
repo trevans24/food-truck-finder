@@ -10,6 +10,7 @@ TruckIndexController.$inject = ['$http'];
 function TruckIndexController($http) {
 	// ViewModel is equal to this
 	var vm = this;
+	vm.getAllTrucks = getAllTrucks;
 	vm.deleteTruck = deleteTruck;
 
 	// INDEX all the Trucks
@@ -39,7 +40,7 @@ TruckShowController.$inject = ['$http', '$routeParams'];
 function TruckShowController($http, $routeParams) {
 	// ViewModel is equal to this
 	var vm = this;
-
+	vm.getOneTruck = getOneTruck;
 	// GET the single truck
 	function getOneTruck() {
 		console.log($routeParams.id);
@@ -76,12 +77,13 @@ TruckEditController.$inject = ['$http', '$location', '$routeParams'];
 function TruckEditController($http, $location, $routeParams) {
 	// ViewModel is equal to this
 	var vm = this;
+	vm.getTruck = getTruck;
 	vm.updateTruck = updateTruck;
 
 	// GET the Truck to Update
 	function getTruck() {
 		console.log($routeParams.id);
-		$http.get('/api/trucks' + $routeParams.id).then(function (res) {
+		$http.get('/api/trucks/' + $routeParams.id).then(function (res) {
 			console.log(res);
 			vm.updatedTruck = res.data;
 		});
@@ -92,7 +94,7 @@ function TruckEditController($http, $location, $routeParams) {
 		$http.put('/api/trucks/' + $routeParams.id, vm.updatedTruck).then(function (res) {
 			console.log(res);
 			var truck = res.data;
-			$location.path('/api/trucks' + truck.id);
+			$location.path('/api/trucks/' + truck.id);
 		});
 	}
 	// GET the Updated Truck
