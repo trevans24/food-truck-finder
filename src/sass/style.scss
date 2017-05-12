@@ -5,8 +5,8 @@ $secondary: #BF2D2F;
 $tertiary: #CA0007;
 $borderColor: #CCC;
 $fontColor: #CFE1F4;
-$locationPin:  #D7CF6C;
-$primaryButton: #D7CC06;
+$locationPin:  #FEE453;
+$primaryButton: #FED009;
 
 // Main font used in styling
 $font: 'Roboto', sans-serif;
@@ -86,33 +86,6 @@ a .navbar-brand .nav-text {
 }
 // END NAV BAR //////////////////////
 
-//////////Main Landing Page///////////
-// .landing-page {
-// 	background-color: $primary;
-// 	margin-top: -40px;
-// 	min-height: 600px;
-// }
-
-// .landing-page h1 {
-// 	color: white;
-// 	font-family: $font;
-// 	height: auto;
-// 	margin-left: 8%;
-// 	padding: 10%;
-// 	text-align: center;
-// 	width: 80%;
-// }
-
-// .buttons {
-// 	margin-left: 15%;
-// }
-
-// .landing-btn {
-// 	border-radius: 20px;
-// 	margin-top: 5%;
-// 	width: 80%;
-// }
-
 // MAP
 #map {
   height: 550px;
@@ -133,7 +106,7 @@ a .navbar-brand .nav-text {
 .card {
 	display: inline-block;
 	margin-bottom: 2px;
-	border: 1px solid #EEECEE;
+	border: 1px solid $borderColor;
 }
 // Truck Picture
 .card img {
@@ -187,7 +160,7 @@ a .navbar-brand .nav-text {
 .truck-description .btn {
 	background-color: $primaryButton;
 	border-radius: 20px;
-	color: white;
+	color: $primary;
 	margin-left: 15%;
 }
 // Trucks Name
