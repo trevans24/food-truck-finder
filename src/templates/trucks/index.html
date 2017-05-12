@@ -1,5 +1,5 @@
 <header ng-include="'templates/nav.html'"></header>
-<section ng-repeat="truck in trucks">
+<section ng-repeat="truck in trucks | filter:search">
 	<div class="card col-md-12 col-xs-12">
 		<img src="{{truck.img_link}}">
 		<div class="truck-info">
@@ -12,8 +12,8 @@
 			</div>
 		</div>
 		<div class="truck-directions">
-			<h6 class="distance">{{truck.distance}}</h6>
-			<a href="#">
+			<h6 class="distance"></h6>
+			<a href="https://www.google.com/maps/place/' + {{truck.latitude}} + ',' + {{truck.longitude}}">
 				<img src="images/icons/directions.png">
 			</a>
 		</div>
