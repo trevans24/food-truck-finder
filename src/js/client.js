@@ -1,4 +1,9 @@
+<<<<<<< HEAD
   // console.log('Client Sided Controller');
+=======
+    // console.log('Client Sided Controller');
+
+>>>>>>> eed440f4f072017d0668ab5072475bd7d5017a6d
 var app = angular.module('mapsApp', ['ngRoute'])
     .controller('MapsController', MapsController)
     .controller('TruckIndexController', TruckIndexController);

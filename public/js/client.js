@@ -100,6 +100,10 @@ function MapsController($scope, $http) {
     } else {
         console.log('Geolocation is not supported for this Browser/OS.');
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> eed440f4f072017d0668ab5072475bd7d5017a6d
     // Allows user to filter the displayed results on the map
     function filterTrucks(category) {
         for (var i = 0; i < $scope.markers.length; i++) {
