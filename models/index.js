@@ -2,6 +2,10 @@
 var Sequelize = require('sequelize');
 
 
+var sequelize = new Sequelize('postgres://alexiohearn@localhost:5432/foodtrucks');
+
+
+
 // var sequelize = new Sequelize('postgres://alexiohearn@localhost:5432/foodtrucks');
 // var sequelize = new Sequelize('postgres://AllieG@localhost:5432/foodtrucks');
 // var sequelize = new Sequelize('postgres://troy@localhost:5432/foodtrucks');

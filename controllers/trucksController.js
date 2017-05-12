@@ -15,6 +15,7 @@ function show(req,res){
 
 function create(req,res){
 	Trucks.create(req.body).then(function(truck){
+		console.log(truck);
 		res.json(truck);
 	});
 }
