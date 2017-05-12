@@ -90,10 +90,6 @@ a .navbar-brand .nav-text {
   width: 100%;
 }
 
-// .map {
-// 	margin-top: -7%;
-// }
-
 .infoWindowContent {
     font-size:  14px !important;
     border-top: 1px solid $borderColor;
@@ -199,15 +195,8 @@ a .navbar-brand .nav-text {
 
 /////////TRUCK ADD PAGE FOR ADMIN ////////////////////
 .new-form {
-	background-color: $borderColor;
-	height: 100vh;
-}
-
-.form-control-file {
 	background-color: $primary;
-	border-radius: 5px;
-	color: $fontColor;
-	width: 60%;
+	height: 100vh;
 }
 
 /////////END TRUCK ADD PAGE FOR ADMIN ////////////////
