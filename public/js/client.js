@@ -38,26 +38,7 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
         requireBase: false
     });
 }]);
-// console.log('Angular Working');
-// Controllers
-// INDEX CONTROLLER
-// TruckIndexController.$inject = ['$http', '$scope'];
-// // Match Injection
-// function TruckIndexController($http, $scope) {
-//     console.log('Index of Trucks');
-//     $scope.hello = 'test';
-//     $http.get('/api/trucks')
-//     .then(function(res){
-//         console.log('you made it');
-//     });
-// }
 
-// // SHOW CONTROLLER
-// TruckShowController.$inject = ['$http', '$routeParams'];
-// function TruckShowController($http, $routeParams){
-//     console.log("$routeParams", $routeParams.id);
-//     console.log("SHOWING TRUCKS");
-// }
 // MAPS CONTROLLER FOR TESTING
 MapsController.$inject = ['$scope', '$http'];
 function MapsController($scope, $http) {
