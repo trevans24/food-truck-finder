@@ -12,7 +12,7 @@ $primaryButton: #FED009;
 $font: 'Roboto', sans-serif;
 
 // Container/Div Sizing the entire window
-$width: 100%;
+$width: 100vw;
 
 #displayResults {
 	margin: 0 auto;
@@ -74,9 +74,7 @@ a .navbar-brand .nav-text {
 	background-color: $secondary;
 	border: 2px solid white;
 	border-radius: 20px;
-	color: $fontColor !important;
 	font-family: $font;
-	opacity: .8;
 	width: 60%;
 }
 
@@ -198,3 +196,18 @@ a .navbar-brand .nav-text {
 	margin: 10px 15px 30px 0;
 }
 // TRUCK INDEX.html END ///////////////////////////////
+
+/////////TRUCK ADD PAGE FOR ADMIN ////////////////////
+.new-form {
+	background-color: $borderColor;
+	height: 100vh;
+}
+
+.form-control-file {
+	background-color: $primary;
+	border-radius: 5px;
+	color: $fontColor;
+	width: 60%;
+}
+
+/////////END TRUCK ADD PAGE FOR ADMIN ////////////////
