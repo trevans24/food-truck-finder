@@ -93,9 +93,6 @@ const driversArray = [
 function truckCreate(){
 	return DB.Trucks.bulkCreate(trucksArray);
 }
-function addUsers(){
-	return DB.Users.bulkCreate(usersArray);
-}
 function addDrivers(){
 	return DB.Drivers.bulkCreate(driversArray);
 }
@@ -103,7 +100,6 @@ function addDrivers(){
 
 
 truckCreate()
-	.then(addUsers)
 	.then(addDrivers)
 	.then(function(){
 		process.exit();
