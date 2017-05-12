@@ -1,23 +1,21 @@
 <header ng-include="'templates/nav.html'"></header>
-<h1> HEY!</h1>
-<!-- <section ng-controller="TruckIndexController as trucks">
-<h1> HEY!</h1>
+<section ng-model="truck">
 	<div class="card col-md-12 col-xs-12" ng-repeat="truck in trucks.all">
-		<img src="{{img_link}}">
+		<img src="{{truck.img_link}}">
 		<div class="truck-info">
-			<h5 class="truck-name">{{name}}</h5>
-			<h5 class="truck-cuisine">{{food_type}}</h5>
+			<h5 class="truck-name">{{truck.name}}</h5>
+			<h5 class="truck-cuisine">{{truck.food_type}}</h5>
 			<div class="favorite">
 				<a href="#" class="btn favorite-btn">
-					<img src="./images/icons/favorite-un.png" alt="favorite-heart">{{favorited}}
+					<img src="./images/icons/favorite-un.png" alt="favorite-heart">{{truck.favorited}}
 				</a>
 			</div>
 		</div>
 		<div class="truck-directions">
-			<h6 class="distance">{{distance}}</h6>
+			<h6 class="distance">{{truck.distance}}</h6>
 			<a href="#">
 				<img src="./images/icons/directions.png">
 			</a>
 		</div>
 	</div>
-</section> -->
+</section>
