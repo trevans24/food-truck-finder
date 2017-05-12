@@ -33,7 +33,6 @@
 //       console.log('Geolocation is not supported for this Browser/OS.');
 //     }
 
-<<<<<<< HEAD
 //     // Gets trucks loaded into server
 //     getTrucks();
 //     // Grabs trucks from DB and runs createMarker to plot them on map
@@ -64,38 +63,6 @@
 //     };
 //     $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
 //     var infoWindow = new google.maps.InfoWindow();
-=======
-    // Gets trucks loaded into server
-    getTrucks();
-    // Grabs trucks from DB and runs createMarker to plot them on map
-    function getTrucks() {
-        $http.get("http://localhost:3000/api/trucks/").then(function (response) {
-            var trucks = response.data;
-            for (var i = 0; i < trucks.length; i++) {
-                createMarker(trucks[i]);
-                $scope.trucks.push(trucks);
-            }
-        });
-    }
-    // Allows user to filter the displayed results on the map
-    function filterTrucks(category){
-        for(var i = 0; i<$scope.markers.length; i++){
-            var marker = $scope.markers[i];
-            if(marker.category == category || category.length === 0){
-                marker.setVisible(true);
-            } else {
-                marker.setVisible(false);
-            }
-        }
-    }
-    var mapOptions = {
-        zoom: 5,
-        center: new google.maps.LatLng(39.74, -104.99),
-        mapTypeId: google.maps.MapTypeId.TERRAIN
-    };
-    $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
-    var infoWindow = new google.maps.InfoWindow();
->>>>>>> eed440f4f072017d0668ab5072475bd7d5017a6d
 
 //     function createMarker(info) {
 //         var image = "../images/icons/foodTruck.png";
