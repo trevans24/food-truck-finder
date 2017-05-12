@@ -7,34 +7,18 @@ angular.module('mapsApp')
 	.controller('TruckEditController', TruckEditController);
 
 // INDEX CONTROLLER
-TruckIndexController.$inject = ['$http', '$scope'];
+TruckIndexController.$inject = ['$http', '$location', '$scope'];
 // Match Injection
-function TruckIndexController($http, $scope) {
-	// ViewModel is equal to this
-	var vm = this;
-	vm.getAllTrucks = getAllTrucks;
-	$scope.all = [];
-	// vm.deleteTruck = deleteTruck;
-
+function TruckIndexController($http, $location, $scope) {
 	// INDEX all the Trucks
 	function getAllTrucks(){
 		console.log("GETTING All Trucks");
 		$http.get('/api/trucks')
 		.then(function(res){
 			console.log(res.data);
-			$scope.all = res.data;
+			$scope.trucks = res.data;
 		});
 	}
-
-	//DELETE the trucks aka...clear the page
-	// function deleteTrucks(){
-	// 	console.log("DELETING All Trucks");
-	// 	$http.delete('/api/trucks/' + truck.id)
-	// 	.then(function(res){
-	// 		var truckIndex = vm.allTrucks.indexOf(trucks);
-	// 		vm.allTrucks.splice(truckIndex, 1);
-	// 	});
-	// }
 
 	// INDEX all the trucks after clearing the page
 	getAllTrucks();

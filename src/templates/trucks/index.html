@@ -1,9 +1,9 @@
 <header ng-include="'templates/nav.html'"></header>
-<section ng-model="truck">
-	<div class="card col-md-12 col-xs-12" ng-repeat="truck in trucks.all">
+<section ng-repeat="truck in trucks">
+	<div class="card col-md-12 col-xs-12">
 		<img src="{{truck.img_link}}">
 		<div class="truck-info">
-			<h5 class="truck-name">{{truck.name}}</h5>
+			<a href="/trucks/{{truck.id}}" class="truck-name">{{truck.name}}</a>
 			<h5 class="truck-cuisine">{{truck.food_type}}</h5>
 			<div class="favorite">
 				<a href="#" class="btn favorite-btn">

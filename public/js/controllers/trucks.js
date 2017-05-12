@@ -5,33 +5,17 @@ console.log("Trucks Controller!!");
 angular.module('mapsApp').controller('TruckIndexController', TruckIndexController).controller('TruckShowController', TruckShowController).controller('TruckNewController', TruckNewController).controller('TruckEditController', TruckEditController);
 
 // INDEX CONTROLLER
-TruckIndexController.$inject = ['$http', '$scope'];
+TruckIndexController.$inject = ['$http', '$location', '$scope'];
 // Match Injection
-function TruckIndexController($http, $scope) {
-	// ViewModel is equal to this
-	var vm = this;
-	vm.getAllTrucks = getAllTrucks;
-	$scope.all = [];
-	// vm.deleteTruck = deleteTruck;
-
+function TruckIndexController($http, $location, $scope) {
 	// INDEX all the Trucks
 	function getAllTrucks() {
 		console.log("GETTING All Trucks");
 		$http.get('/api/trucks').then(function (res) {
 			console.log(res.data);
-			$scope.all = res.data;
+			$scope.trucks = res.data;
 		});
 	}
-
-	//DELETE the trucks aka...clear the page
-	// function deleteTrucks(){
-	// 	console.log("DELETING All Trucks");
-	// 	$http.delete('/api/trucks/' + truck.id)
-	// 	.then(function(res){
-	// 		var truckIndex = vm.allTrucks.indexOf(trucks);
-	// 		vm.allTrucks.splice(truckIndex, 1);
-	// 	});
-	// }
 
 	// INDEX all the trucks after clearing the page
 	getAllTrucks();
@@ -52,45 +36,42 @@ function TruckShowController($http, $location, $routeParams, $scope) {
 			$scope.truck = res.data;
 		});
 	}
+
 	getOneTruck();
 }
 
 // NEW CONTROLLER
 TruckNewController.$inject = ['$http', '$location', '$scope'];
-// Match Injections
+// Match Injections		  // Match Injections
 function TruckNewController($http, $location, $scope) {
-	// ViewModel is equal to this
+	// ViewModel is equal to this		  	// ViewModel is equal to this
 	var vm = this;
 	$scope.pos = [];
 	$scope.newTruck = {};
-
 	$scope.saveTruck = saveTruck;
 	$scope.getLocation = getLocation;
 
 	getLocation();
-	// POST the new truck added to the DB
+	// POST the new truck added to the DB		  	// POST the new truck added to the DB
 	function saveTruck() {
 		console.log(" hye");
-		$http
-		.post('/api/trucks', $scope.newTruck)
-		.then(function (res) {
+		$http.post('/api/trucks', $scope.newTruck).then(function (res) {
 			var newTruck = res.data;
 			console.log(res.data);
 			$location.path('/trucks/' + newTruck.id);
 		});
 	}
-	function getLocation(){
-        navigator.geolocation.getCurrentPosition(function (position) {
-        var pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-        	};
-        	document.getElementById('longitude').value = pos.lat;
-        	document.getElementById('latitude').value = pos.lng;
-        	
-        	$scope.pos = pos;
-    	});
+	function getLocation() {
+		navigator.geolocation.getCurrentPosition(function (position) {
+			var pos = {
+				lat: position.coords.latitude,
+				lng: position.coords.longitude
+			};
+			document.getElementById('longitude').value = pos.lat;
+			document.getElementById('latitude').value = pos.lng;
 
+			$scope.pos = pos;
+		});
 	}
 }
 
