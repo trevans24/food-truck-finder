@@ -39,19 +39,19 @@ function TruckIndexController($http) {
 }
 
 // SHOW CONTROLLER
-TruckShowController.$inject = ['$http', '$routeParams'];
+TruckShowController.$inject = ['$http', '$location', '$routeParams', '$scope'];
 // Match Injections
-function TruckShowController($http, $routeParams) {
+function TruckShowController($http,$location ,$routeParams, $scope) {
 	// ViewModel is equal to this
 	var vm = this;
 	vm.getOneTruck = getOneTruck;
 	// GET the single truck
 	function getOneTruck(){
-		console.log($routeParams.id);
+		// console.log($routeParams.id);
 		$http.get('/api/trucks/' + $routeParams.id)
 		.then(function(res){
-			console.log(res.data + " get one truck!!!!");
-			vm.oneTruck = res.data;
+			console.log(res.data);
+			$scope.truck = res.data;
 		});
 	}
 

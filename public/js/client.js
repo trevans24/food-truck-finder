@@ -2,7 +2,9 @@
 
 // console.log('Client Sided Controller');
 
-var app = angular.module('mapsApp', ['ngRoute']).controller('MapsController', MapsController).controller('TruckIndexController', TruckIndexController).controller('TruckShowController', TruckShowController);
+var app = angular.module('mapsApp', ['ngRoute']).controller('MapsController', MapsController);
+// .controller('TruckIndexController', TruckIndexController)
+// .controller('TruckShowController', TruckShowController);
 // using HTML 5 for location templates
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider
@@ -30,36 +32,32 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
     .when('/trucks', {
         templateUrl: '../templates/trucks/new.html',
         controller: 'TruckNewController'
-    })
-    // Edit
-    .when('/trucks/:id', {
-        templateUrl: '../templates/trucks/edit.html',
-        controller: 'TruckEditController'
     });
     $locationProvider.html5Mode({
         enabled: true,
         requireBase: false
     });
 }]);
-console.log('Angular Working');
+// console.log('Angular Working');
 // Controllers
 // INDEX CONTROLLER
-TruckIndexController.$inject = ['$http', '$scope'];
-// Match Injection
-function TruckIndexController($http, $scope) {
-    console.log('Index of Trucks');
-    $scope.hello = 'test';
-    $http.get('/api/trucks').then(function (res) {
-        console.log('you made it');
-    });
-}
+// TruckIndexController.$inject = ['$http', '$scope'];
+// // Match Injection
+// function TruckIndexController($http, $scope) {
+//     console.log('Index of Trucks');
+//     $scope.hello = 'test';
+//     $http.get('/api/trucks')
+//     .then(function(res){
+//         console.log('you made it');
+//     });
+// }
 
-// SHOW CONTROLLER
-TruckShowController.$inject = ['$http', '$routeParams'];
-function TruckShowController($http, $routeParams) {
-    console.log("$routeParams", $routeParams.id);
-    console.log("SHOWING TRUCKS");
-}
+// // SHOW CONTROLLER
+// TruckShowController.$inject = ['$http', '$routeParams'];
+// function TruckShowController($http, $routeParams){
+//     console.log("$routeParams", $routeParams.id);
+//     console.log("SHOWING TRUCKS");
+// }
 // MAPS CONTROLLER FOR TESTING
 MapsController.$inject = ['$scope', '$http'];
 function MapsController($scope, $http) {
@@ -71,13 +69,13 @@ function MapsController($scope, $http) {
     initMap();
     // Checks if browser is compatible with Geolocation
     if (navigator.geolocation) {
-        console.log('Geolocation is supported!!');
+        // console.log('Geolocation is supported!!');
         navigator.geolocation.getCurrentPosition(function (position) {
             var pos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
             };
-            console.log(pos.lat + " " + pos.lng);
+            // console.log(pos.lat + " " + pos.lng);
             panTo(pos);
             userPos(pos);
             function userPos(pos) {
@@ -95,7 +93,7 @@ function MapsController($scope, $http) {
                 getTrucks();
                 // Grabs trucks from DB and runs createMarker to plot them on map
                 function getTrucks() {
-                    $http.get("http://localhost:3000/api/trucks/").then(function (response) {
+                    $http.get("/api/trucks/").then(function (response) {
                         var trucks = response.data;
                         for (var i = 0; i < trucks.length; i++) {
                             createMarker(trucks[i]);
@@ -128,15 +126,15 @@ function MapsController($scope, $http) {
     var infoWindow = new google.maps.InfoWindow();
     var createMarker = function createMarker(info) {
         var image = "../images/icons/foodTruck.png";
-        console.log("Creating  marker " + info);
-        console.log($scope.map);
+        // console.log("Creating  marker " + info);
+        // console.log($scope.map);
         var marker = new google.maps.Marker({
             map: $scope.map,
             icon: image,
             position: new google.maps.LatLng(info.latitude, info.longitude),
             title: info.name
         });
-        console.log(info.id);
+        // console.log(info.id);
         marker.content = '<div class="infoWindowContent">' + 'Category: ' + info.food_type + '</div>' + '</br>' + '<a href="/trucks/' + info.id + '">Learn More</a>' + '</br>' + '<a href="https://www.google.com/maps/place/' + info.latitude + ',' + info.longitude + '&dirflg=w">Get Directions</a>';
         google.maps.event.addListener(marker, 'click', function () {
             infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);

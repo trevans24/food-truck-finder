@@ -1,23 +1,18 @@
 // ////////////VARS AND MIXINS///////////////////
 // Declaring our main style colors
-$primary: #3684A5;
-$secondary: #3E98BE;
+$primary: #BC4252;
+$secondary: #BF2D2F;
+$tertiary: #CA0007;
 $borderColor: #CCC;
-$fontColor: #c2C2C2;
-$locationPin:  #FFE066;
-$primaryButton: #F1D35F;
+$fontColor: #CFE1F4;
+$locationPin:  #D7CF6C;
+$primaryButton: #D7CC06;
 
 // Main font used in styling
 $font: 'Roboto', sans-serif;
 
 // Container/Div Sizing the entire window
 $width: 100%;
-
-.truckViews{
-	z-index: 30;
-	bottom: 200px;
-	position: relative;
-}
 
 #displayResults {
 	margin: 0 auto;
@@ -27,26 +22,26 @@ $width: 100%;
 
 // ////////////END VARS AND MIXINS///////////////
 body {
-	// margin-top: -20px;
+	// margin-top: -20px !important;
 }
 // NAV BAR
 nav {
-	margin-bottom: -10%;
+	margin-bottom: 0 !important;
 }
 
 .navbar .navbar-default {
-	background-color: $primary;
+	background-color: $secondary !important;
 	font-family: $font;
 	margin-bottom: -15%;
 	z-index: auto;
 }
 
 .navbar-header {
-	background-color: $primary;
+	background-color: $secondary !important;
 }
 
 .navbar-collapse {
-	background-color: $primary;
+	background-color: $secondary !important;
 }
 
 a .navbar-brand .nav-text {
@@ -55,7 +50,7 @@ a .navbar-brand .nav-text {
 }
 
 .nav-text {
-	background-color: $primary;
+	background-color: $secondary !important;
 	color: $fontColor !important;
 	font-family: $font;
 	text-align: center;
@@ -124,10 +119,9 @@ a .navbar-brand .nav-text {
   width: 100%;
 }
 
-.map {
-	margin-top: -7%;
-	// z-index: -1;
-}
+// .map {
+// 	margin-top: -7%;
+// }
 
 .infoWindowContent {
     font-size:  14px !important;
@@ -186,6 +180,10 @@ a .navbar-brand .nav-text {
 
 // TRUCK INDEX.html STYLING ///////////////////////////
 // Description button
+.main-truck-page {
+	height: 100%;
+}
+
 .truck-description .btn {
 	background-color: $primaryButton;
 	border-radius: 20px;
