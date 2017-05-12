@@ -2,10 +2,27 @@
 <div ng-controller="MapsController" class="map">
 
   <div id="map"></div>
-  <button class="btn-success" ng-click="showme=true">Show Results</button>
-  <button class="btn-danger" ng-click="showme=false" ng-show="showme">Hide Results</button>
 
-  <div class="truckViews animate-show-hide" ng-repeat="marker in markers">
-    <a href="#" ng-click="openInfoWindow($event, marker)" ng-show="showme">{{marker.title}}</a>
-  </div>
+	<div ng-controller="TruckIndexController">
+	<section ng-repeat="truck in trucks">
+		<div class="card col-md-12 col-xs-12">
+			<img src="{{truck.img_link}}">
+			<div class="truck-info">
+				<a href="/trucks/{{truck.id}}" class="truck-name">{{truck.name}}</a>
+				<h5 class="truck-cuisine">{{truck.food_type}}</h5>
+				<div class="favorite">
+					<a href="#" class="btn favorite-btn">
+						<img src="images/icons/favorite-un.png" alt="favorite-heart">{{truck.favorited}}
+					</a>
+				</div>
+			</div>
+			<div class="truck-directions">
+				<h6 class="distance">{{truck.distance}}</h6>
+				<a href="#">
+					<img src="images/icons/directions.png">
+				</a>
+			</div>
+		</div>
+	</section>
+	</div>
 </div>
