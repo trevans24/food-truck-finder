@@ -116,7 +116,7 @@ function MapsController($scope, $http) {
             title: info.name
         });
         // console.log(info.id);
-        marker.content = '<div class="infoWindowContent">' + 'Category: ' + info.food_type + '</div>' + '</br>' + '<a href="/trucks/' + info.id + '">Learn More</a>' + '</br>' + '<a href="https://www.google.com/maps/place/' + info.latitude + ',' + info.longitude + '&dirflg=w">Get Directions</a>';
+        marker.content = '<div class="infoWindowContent">' + 'Category: ' + info.food_type + '</div>' + '</br>' + '<a href="/trucks/' + info.id + '">Learn More</a>' + '</br>' + '<a href="https://www.google.com/maps/place/' + info.latitude + ',' + info.longitude + ' ">Get Directions</a>';
         google.maps.event.addListener(marker, 'click', function () {
             infoWindow.setContent('<h2>' + marker.title + '</h2>' + marker.content);
             infoWindow.open($scope.map, marker);
