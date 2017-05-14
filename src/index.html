@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <base href="/"> -->
 	<title>Welcome to FFTT</title>
 	<!-- css stylesheets -->
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
@@ -22,8 +21,6 @@
 	<!-- angular -->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
   <script src="bower_components/angular-route/angular-route.min.js"></script>
-  <!-- map js file -->
-  <!-- <script src="/js/map.js"></script> -->
   <!-- client side js -->
   <script src="/js/client.js"></script> 
   <!-- controllers -->
@@ -34,30 +31,10 @@
 <ng-view></ng-view>
 
 </body>
-<script>
-      function initMap() {
-        // var uluru = {lat: 39.74, lng: -104.99};
-        // var map = new google.maps.Map(document.getElementById('map'), {
-        //   zoom: 25,
-        //   center: uluru
-        // });
-         // infoWindow = new google.maps.InfoWindow;
-        // var marker = new google.maps.Marker({
-        //   position: uluru,
-        //   map: map
-        // });
-
-      // }
-      // var map, infoWindow;
-      // function initMap() {
-      //   map = new google.maps.Map(document.getElementById('map'), {
-      //     center: {lat: -34.397, lng: 150.644},
-      //     zoom: 6
-      //   });
-      //   infoWindow = new google.maps.InfoWindow;
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPqCXeTyW5s4MiWTf6kzwm-r58azGK18Q">
-    </script>
+  <script>
+    function initMap() {}
+  </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPqCXeTyW5s4MiWTf6kzwm-r58azGK18Q">
+  </script>
 </html>

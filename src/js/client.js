@@ -1,10 +1,6 @@
-    // console.log('Client Sided Controller');
-
 var app = angular.module('mapsApp', ['ngRoute'])
     .controller('MapsController', MapsController);
-    // .controller('TruckIndexController', TruckIndexController)
-    // .controller('TruckShowController', TruckShowController);
-        // using HTML 5 for location templates
+// using HTML 5 for location templates
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
         $routeProvider
             // Main Routes

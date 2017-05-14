@@ -10,7 +10,6 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 /// For Backend Controllers
 
-
 app.use(trucksRouter); //pulls in config/routes.js
 
 app.use(express.static('public'));

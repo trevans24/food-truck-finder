@@ -1,6 +1,5 @@
 'use strict';
 
-console.log("Trucks Controller!!");
 // ANGULAR CONTROLLERS TO USE, INDEX, SHOW, POST, PUT
 angular.module('mapsApp').controller('TruckIndexController', TruckIndexController).controller('TruckShowController', TruckShowController).controller('TruckNewController', TruckNewController).controller('TruckEditController', TruckEditController);
 
@@ -8,13 +7,6 @@ angular.module('mapsApp').controller('TruckIndexController', TruckIndexControlle
 TruckIndexController.$inject = ['$http', '$location', '$scope'];
 // Match Injection
 function TruckIndexController($http, $location, $scope) {
-	var vm = this;
-	vm.popUp = popUp;
-
-	function popUp() {
-		console.log('Clicked');
-	}
-
 	// INDEX all the Trucks
 	function getAllTrucks() {
 		console.log("GETTING All Trucks");
@@ -58,7 +50,7 @@ function TruckNewController($http, $location, $scope) {
 	$scope.getLocation = getLocation;
 
 	getLocation();
-	// POST the new truck added to the DB		  	// POST the new truck added to the DB
+	// POST the new truck added to the DB
 	function saveTruck() {
 		console.log(" hye");
 		$http.post('/api/trucks', $scope.newTruck).then(function (res) {

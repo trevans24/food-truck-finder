@@ -42,11 +42,3 @@ module.exports.show = show;
 module.exports.create = create;
 module.exports.destroy = destroy;
 module.exports.update = update;
-
-// maybe a way to mass export all functions from controller???
-// module.exports = {
-// 	index: index,
-// 	show: show,
-// 	create: create,
-// 	destroy: destroy
-// };
