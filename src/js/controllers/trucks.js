@@ -11,10 +11,8 @@ TruckIndexController.$inject = ['$http', '$location', '$scope'];
 function TruckIndexController($http, $location, $scope) {
 	// INDEX all the Trucks
 	function getAllTrucks(){
-		console.log("GETTING All Trucks");
 		$http.get('/api/trucks')
 		.then(function(res){
-			console.log(res.data);
 			$scope.trucks = res.data;
 		});
 	}
@@ -34,7 +32,6 @@ function TruckShowController($http,$location ,$routeParams, $scope) {
 		// console.log($routeParams.id);
 		$http.get('/api/trucks/' + $routeParams.id)
 		.then(function(res){
-			console.log(res.data);
 			$scope.truck = res.data;
 		});
 	}
@@ -56,12 +53,10 @@ function TruckNewController($http, $location, $scope) {
 		getLocation();
   	// POST the new truck added to the DB
   	function saveTruck() {
-		console.log(" hye");
 		$http
  		.post('/api/trucks', $scope.newTruck)
  		.then(function (res) {
   			var newTruck = res.data;
-				console.log(res.data);
  				$location.path('/trucks/' + newTruck.id);
   		});
   	}
@@ -91,10 +86,8 @@ function TruckEditController($http, $location, $routeParams) {
 
 	// GET the Truck to Update
 	function getTruck(){
-		console.log($routeParams.id);
 		$http.get('/api/trucks/' + $routeParams.id)
 		.then(function(res){
-			console.log(res);
 			vm.updatedTruck = res.data;
 		});
 	}
@@ -103,7 +96,6 @@ function TruckEditController($http, $location, $routeParams) {
 	function updateTruck(){
 		$http.put('/api/trucks/' + $routeParams.id, vm.updatedTruck)
 		.then(function(res){
-			console.log(res);
 			var truck = res.data;
 			$location.path('/api/trucks/' + truck.id);
 		});
