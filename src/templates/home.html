@@ -1,28 +1,5 @@
 <header ng-include="'templates/nav.html'"></header>
 <div ng-controller="MapsController" class="map">
-
   <div id="map"></div>
-
-	<div ng-controller="TruckIndexController">
-	<section ng-repeat="truck in trucks">
-		<div class="card col-md-12 col-xs-12">
-			<img src="{{truck.img_link}}">
-			<div class="truck-info">
-				<a href="/trucks/{{truck.id}}" class="truck-name">{{truck.name}}</a>
-				<h5 class="truck-cuisine">{{truck.food_type}}</h5>
-				<div class="favorite">
-					<a href="#" class="btn favorite-btn">
-						<img src="images/icons/favorite-un.png" alt="favorite-heart">{{truck.favorited}}
-					</a>
-				</div>
-			</div>
-			<div class="truck-directions">
-				<h6 class="distance"></h6>
-				<a href="https://www.google.com/maps/place/' + {{truck.latitude}} + ',' + {{truck.longitude}}'">
-					<img src="images/icons/directions.png">
-				</a>
-			</div>
-		</div>
-	</section>
-	</div>
 </div>
+<footer ng-include="'templates/footer.html'"></footer>

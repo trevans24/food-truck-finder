@@ -10,6 +10,14 @@ angular.module('mapsApp')
 TruckIndexController.$inject = ['$http', '$location', '$scope'];
 // Match Injection
 function TruckIndexController($http, $location, $scope) {
+	var vm = this;
+	vm.popUp = popUp;
+
+	function popUp(){
+		console.log('Clicked');
+
+	}
+
 	// INDEX all the Trucks
 	function getAllTrucks(){
 		console.log("GETTING All Trucks");
@@ -19,7 +27,6 @@ function TruckIndexController($http, $location, $scope) {
 			$scope.trucks = res.data;
 		});
 	}
-
 	// INDEX all the trucks after clearing the page
 	getAllTrucks();
 }
