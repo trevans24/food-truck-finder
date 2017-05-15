@@ -1,12 +1,9 @@
 // SQL db =  'foodTrucks';
 var Sequelize = require('sequelize');
 
-
-// var sequelize = new Sequelize('postgres://alexiohearn@localhost:5432/foodtrucks');
+// var sequelize = new Sequelize('postgres://troy@localhost:5432/foodtrucks');
 // var sequelize = new Sequelize('postgres://AllieG@localhost:5432/foodtrucks');
-var sequelize = new Sequelize('postgres://alexiohearn@localhost:5432/foodtrucks');
-
-
+// var sequelize = new Sequelize('postgres://alexiohearn@localhost:5432/foodtrucks');
 
 if (process.env.DATABASE_URL) {
   // the application is executed on Heroku ... use the postgres database
@@ -32,7 +29,6 @@ var Drivers = sequelize.import('./drivers.js');
 
 Trucks.belongsTo(Drivers);
 Drivers.hasOne(Trucks);
-
 
 module.exports.models = {
 	Trucks: Trucks,

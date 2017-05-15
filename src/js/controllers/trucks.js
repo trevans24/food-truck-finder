@@ -31,7 +31,7 @@ function TruckShowController($http,$location ,$routeParams, $scope) {
 	function getOneTruck(){
 		$http.get('/api/trucks/' + $routeParams.id)
 		.then((res)=>{
-			console.log(res.data.description);
+			// console.log(res.data.description);
 			$scope.truck = res.data;
 		});
 	}

@@ -2,8 +2,9 @@
 
 const  DB = require('../models').models;
 
-console.log('test');
+// console.log('test');
 
+// Users for the DB
 const usersArray = [
 	{
 		name: 'Troy'
@@ -16,6 +17,7 @@ const usersArray = [
 	}
 ];
 
+// Drivers
 const driversArray = [
 	{
 		name: 'Troy T-Bone'
@@ -28,9 +30,11 @@ const driversArray = [
 	}
 ];
 
+// Create Trucks
 function truckCreate(){
 	return DB.Trucks.bulkCreate(trucksArray);
 }
+// Create Drivers
 function addDrivers(){
 	return DB.Drivers.bulkCreate(driversArray);
 }
