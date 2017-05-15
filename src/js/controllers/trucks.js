@@ -43,7 +43,7 @@ function TruckShowController($http,$location ,$routeParams, $scope) {
 TruckNewController.$inject = ['$http', '$location', '$scope'];
   // Match Injections		  // Match Injections
 function TruckNewController($http, $location, $scope) {
-  	// ViewModel is equal to this		  	// ViewModel is equal to this
+  	// ViewModel is equal to this
   	let vm = this;
   	$scope.pos = [];
   	$scope.newTruck = {};
@@ -62,13 +62,14 @@ function TruckNewController($http, $location, $scope) {
   	}
  	function getLocation(){
          navigator.geolocation.getCurrentPosition(function (position) {
+         	// position of user on lat, long coordinates via location provider
          let pos = {
              lat: position.coords.latitude,
              lng: position.coords.longitude
          	};
          	document.getElementById('longitude').value = pos.lat;
          	document.getElementById('latitude').value = pos.lng;
-         	
+         	// SCOPING for use in the form and in the map
          	$scope.pos = pos;
      	});
  

@@ -1,8 +1,8 @@
 const app = angular.module('mapsApp', ['ngRoute'])
-    .controller('MapsController', MapsController);
+.controller('MapsController', MapsController);
 // using HTML 5 for location templates
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
-        $routeProvider
+    $routeProvider
             // Main Routes
             .when('/', {
                 templateUrl:'../templates/home.html',
@@ -28,11 +28,11 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
                 templateUrl: '../templates/trucks/new.html',
                 controller: 'TruckNewController'
             });
-        $locationProvider.html5Mode({
-            enabled: true,
-            requireBase: false
-        });
-}]);
+            $locationProvider.html5Mode({
+                enabled: true,
+                requireBase: false
+            });
+        }]);
 
 // MAPS CONTROLLER FOR TESTING
 MapsController.$inject = ['$scope', '$http'];
@@ -47,26 +47,26 @@ function MapsController($scope, $http) {
     if (navigator.geolocation) {
       // console.log('Geolocation is supported!!');
       navigator.geolocation.getCurrentPosition(function(position) {
-            let pos = {
-              lat: position.coords.latitude,
-              lng: position.coords.longitude
-          };
+        let pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
+      };
           // console.log(pos.lat + " " + pos.lng);
-            panTo(pos);
-            userPos(pos);
-            function userPos(pos){
-                let marker = new google.maps.Marker({
-                    map: $scope.map,
-                    position: new google.maps.LatLng(pos.lat, pos.lng)
-                });
-            }
-            function panTo(pos){
-                let mapOptions = {
-                    zoom: 15,
-                    center: new google.maps.LatLng(pos)
-                };
+          panTo(pos);
+          userPos(pos);
+          function userPos(pos){
+            let marker = new google.maps.Marker({
+                map: $scope.map,
+                position: new google.maps.LatLng(pos.lat, pos.lng)
+            });
+        }
+        function panTo(pos){
+            let mapOptions = {
+                zoom: 15,
+                center: new google.maps.LatLng(pos)
+            };
             $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
-                getTrucks();
+            getTrucks();
                 // Grabs trucks from DB and runs createMarker to plot them on map
                 function getTrucks() {
                     $http.get("/api/trucks/").then(function (response) {
@@ -74,14 +74,14 @@ function MapsController($scope, $http) {
                         for (var i = 0; i < trucks.length; i++) {
                             createMarker(trucks[i]);
                             $scope.trucks.push(trucks);
+                        }
+                    });
+                }
             }
         });
-    }
-}
-    });
-    } else {
+  } else {
       console.log('Geolocation is not supported for this Browser/OS.');
-    }
+  }
     // Allows user to filter the displayed results on the map
     function filterTrucks(category){
         for(let i = 0; i<$scope.markers.length; i++){
