@@ -29,9 +29,9 @@ function TruckShowController($http,$location ,$routeParams, $scope) {
 	vm.getOneTruck = getOneTruck;
 	// GET the single truck
 	function getOneTruck(){
-		// console.log($routeParams.id);
 		$http.get('/api/trucks/' + $routeParams.id)
 		.then((res)=>{
+			console.log(res.data.description);
 			$scope.truck = res.data;
 		});
 	}
