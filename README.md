@@ -1,18 +1,66 @@
 # food-truck-finder
-Project 3 Food Truck App
+Project 3 Food Truck App - Alexi, Cole, Troy
 
-##Link to Our App
+## Link to Our App
 [Link to Our Mobile App](https://fftt.herokuapp.com)
 ![Logo proto](img/logo.jpg)
-![UXmockup](img/UXmockup.jpg)
-![sample whiteboard](img/sampleday.jpg)
-![sample whiteboard](img/workingonit.jpg)
 
 ### Elevator pitch
 
 'Whats up ninja turtles!?! are y'all totally like hungry?  Well what If I told you that I knew of every dope/bomb.com/fun food truck nearby?  Well I do, cause of Foodie Foodie Truck Truck.  Tacos, Exotic, Hamburgers, all of your chronic-tasty-treats... We got it all.   Wait? What's that? you are actually a food truck owner? Well with our app we make it super simple and steezy to let your followers know where you are.  Just open the app and it updates your location for you, automatically! pretty cheesy right!!! 
 
 -by Alexi + Troy
+
+![prototypes : Allie Williams](img/Truck_Detail_Page.png)
+
+
+## Ideation and Influences
+
+The Original Idea came from Troy Evans who proposed that there were'nt any good food truck finder apps for the greater Denver area.  And one of the major porblems that the exisiting denver food truck apps had, and also what foodtruck owners expressed, was that they didn't allow users to easily find trucks.  We found that if you took some time to find a truck via grubhub, roaming hunger or yelp, and then tracked down their webpage, and found their schedule you could eventually figure out where they were and if they were even open.  But it is not an easy process and we knew we could find a better way.
+
+![prototypes : Allie Williams](img/Search_Results.jpg)
+
+
+### Plan
+
+Our plan was to build our own database,  that stored all the pertinent details of the food trucks our users were looking for, and to use the google maps api to clearly display the location of the trucks, while making it a 1 step process for truck owners to update their location.  Also we wanted to focus on the mobile design for the interface given that most of our users would be using the app on their smartphones.
+
+
+## Technologies Used
+
+Express, Node.js
+JavaScript
+Angular
+Google Maps API
+Sass + Gulp
+HTML/CSS
+Heroku
+
+
+### Challenges
+
+User Authentication -- we spent an excess of 20 man hours on this
+
+Version Control -- Very Challenging managing our combined workflow
+
+Hosting On Heroku -- took 8+ hr to solve all issues with online hosting and databse setup
+
+Front End Routing 
+
+
+![sample whiteboard](img/Search_Results.jpg)
+
+####  What We accomplished
+
+1) Worked as a team to solve all major problems, and managed to delegate tasks well enough that there weren't any problems with overlapping work.
+2) Automatic Update of Truck location for Owners
+3) Easy To Use and Visually Appealing Layout with clean user interface
+4) a solution to find where great food trucks actually are! 
+
+
+
+## Our UX mockup by Allie Williams
+![sample whiteboard](img/sampleday.jpg)
 
 ### Individual Contributions: Teamwork made The Dream Work
 
@@ -22,10 +70,21 @@ Alexi: Google map logic, geo-location functionality, connected Front to Back end
 
 Cole: Built Server + API, back-end CRUD routes with node.j/express, and deployed app to heroku
 
+![UXmockup](img/UXmockup.jpg)
+
+
+![sample whiteboard](img/workingonit.jpg)
+
 
 ## Future Plans
 
-Getting the App out there!  Fully Functioning stylish, and 
+We plan to add User authentication/admin functionality for truck owners, because we don't want anyone to be able to add their own trucks.  
+
+Filters, so that you can sort trucks that are displayed by food type, and search functionality for finding favorite trucks.
+
+Favorites: We want to add a custom rating that lets users 'like' their favorite trucks. 
+
+
 
 # User Research
 # Survey used
