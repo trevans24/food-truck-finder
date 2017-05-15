@@ -28,13 +28,14 @@ Our plan was to build our own database,  that stored all the pertinent details o
 
 ## Technologies Used
 
-Express, Node.js
-JavaScript
-Angular
-Google Maps API
-Sass + Gulp
-HTML/CSS
-Heroku
+1. Express
+1. Node.js
+1. JavaScript
+1. Angular
+1. Google Maps API
+1. Sass + Gulp
+1. HTML/CSS
+1. Heroku
 
 
 ### Challenges
