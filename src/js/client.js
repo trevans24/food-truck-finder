@@ -101,6 +101,7 @@ function MapsController($scope, $http) {
     $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
     let infoWindow = new google.maps.InfoWindow();
     let createMarker = function createMarker(info) {
+        console.log(info.food_type + " testing ");
         let image = "../images/icons/foodTruck.png";
         // console.log("Creating  marker " + info);
         // console.log($scope.map);
