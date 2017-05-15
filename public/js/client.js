@@ -63,7 +63,7 @@ function MapsController($scope, $http) {
             }
             function panTo(pos) {
                 var mapOptions = {
-                    zoom: 16,
+                    zoom: 15,
                     center: new google.maps.LatLng(pos)
                 };
                 $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
