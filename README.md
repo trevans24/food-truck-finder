@@ -63,7 +63,7 @@ Front End Routing
 
 
 ## Our UX mockup by Allie Williams
-![sample whiteboard](img/sampleday.jpg)
+![UXmockup](img/UXmockup.jpg)
 
 ### Individual Contributions: Teamwork made The Dream Work
 
@@ -73,7 +73,7 @@ Alexi: Google map logic, geo-location functionality, connected Front to Back end
 
 Cole: Built Server + API, back-end CRUD routes with node.j/express, and deployed app to heroku
 
-![UXmockup](img/UXmockup.jpg)
+![sample whiteboard](img/sampleday.jpg)
 
 
 ![sample whiteboard](img/workingonit.jpg)
