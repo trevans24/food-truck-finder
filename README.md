@@ -1,6 +1,32 @@
 # food-truck-finder
 Project 3 Food Truck App
-hey
+
+##[Link to Our Mobile App](https://theysaidso.com/api)
+##[Logo proto](img/logo.jpg)
+##[]()
+##[]()
+##[]()
+
+### Elevator pitch
+
+'Whats up ninja turtles!?! are y'all totally like hungry?  Well what If I told you that I knew of every dope/bomb.com/fun food truck nearby?  Well I do, cause of Foodie Foodie Truck Truck.  Tacos, Exotic, Hamburgers, all of your chronic-tasty-treats... We got it all.   Wait? What's that? you are actually a food truck owner? Well with our app we make it super simple and steezy to let your followers know where you are.  Just open the app and it updates your location for you, automatically! pretty cheesy right!!! 
+
+-by Alexi + Troy
+
+### Individual Contributions: Teamwork made The Dream Work
+
+Troy: Sassy Gulp, styling Front End controllers, header/footer navbar, styling, file structure
+
+Alexi: Google map logic, geo-location functionality, connected Front to Back end, styling 
+
+Cole: Built Server + API, back-end CRUD routes with node.j/express, and deployed app to heroku
+
+
+## Future Plans
+
+Getting the App out there!  Fully Functioning stylish, and 
+
+# User Research
 # Survey used
 1. What food apps do you currently use?
 1. What reasons why?
