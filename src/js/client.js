@@ -1,4 +1,4 @@
-var app = angular.module('mapsApp', ['ngRoute'])
+const app = angular.module('mapsApp', ['ngRoute'])
     .controller('MapsController', MapsController);
 // using HTML 5 for location templates
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
@@ -37,7 +37,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 // MAPS CONTROLLER FOR TESTING
 MapsController.$inject = ['$scope', '$http'];
 function MapsController($scope, $http) {
-    var self = this;
+    const self = this;
     $scope.trucks = [];
     $scope.markers = [];
     self.filterTrucks = filterTrucks;
@@ -47,7 +47,7 @@ function MapsController($scope, $http) {
     if (navigator.geolocation) {
       // console.log('Geolocation is supported!!');
       navigator.geolocation.getCurrentPosition(function(position) {
-            var pos = {
+            let pos = {
               lat: position.coords.latitude,
               lng: position.coords.longitude
           };
@@ -55,13 +55,13 @@ function MapsController($scope, $http) {
             panTo(pos);
             userPos(pos);
             function userPos(pos){
-                var marker = new google.maps.Marker({
+                let marker = new google.maps.Marker({
                     map: $scope.map,
                     position: new google.maps.LatLng(pos.lat, pos.lng)
                 });
             }
             function panTo(pos){
-                var mapOptions = {
+                let mapOptions = {
                     zoom: 15,
                     center: new google.maps.LatLng(pos)
                 };
@@ -70,7 +70,7 @@ function MapsController($scope, $http) {
                 // Grabs trucks from DB and runs createMarker to plot them on map
                 function getTrucks() {
                     $http.get("/api/trucks/").then(function (response) {
-                        var trucks = response.data;
+                        let trucks = response.data;
                         for (var i = 0; i < trucks.length; i++) {
                             createMarker(trucks[i]);
                             $scope.trucks.push(trucks);
@@ -84,8 +84,8 @@ function MapsController($scope, $http) {
     }
     // Allows user to filter the displayed results on the map
     function filterTrucks(category){
-        for(var i = 0; i<$scope.markers.length; i++){
-            var marker = $scope.markers[i];
+        for(let i = 0; i<$scope.markers.length; i++){
+            let marker = $scope.markers[i];
             if(marker.category == category || category.length === 0){
                 marker.setVisible(true);
             } else {
@@ -93,18 +93,18 @@ function MapsController($scope, $http) {
             }
         }
     }
-    var mapOptions = {
+    let mapOptions = {
         zoom: 13,
         center: new google.maps.LatLng(39.74, -104.99),
         mapTypeId: google.maps.MapTypeId.TERRAIN
     };
     $scope.map = new google.maps.Map(document.getElementById('map'), mapOptions);
-    var infoWindow = new google.maps.InfoWindow();
-    var createMarker = function createMarker(info) {
-        var image = "../images/icons/foodTruck.png";
+    let infoWindow = new google.maps.InfoWindow();
+    let createMarker = function createMarker(info) {
+        let image = "../images/icons/foodTruck.png";
         // console.log("Creating  marker " + info);
         // console.log($scope.map);
-        var marker = new google.maps.Marker({
+        let marker = new google.maps.Marker({
             map: $scope.map,
             icon: image,
             position: new google.maps.LatLng(info.latitude, info.longitude),

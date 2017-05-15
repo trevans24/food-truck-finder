@@ -12,7 +12,7 @@ function TruckIndexController($http, $location, $scope) {
 	// INDEX all the Trucks
 	function getAllTrucks(){
 		$http.get('/api/trucks')
-		.then(function(res){
+		.then((res)=>{
 			$scope.trucks = res.data;
 		});
 	}
@@ -25,13 +25,13 @@ TruckShowController.$inject = ['$http', '$location', '$routeParams', '$scope'];
 // Match Injections
 function TruckShowController($http,$location ,$routeParams, $scope) {
 	// ViewModel is equal to this
-	var vm = this;
+	let vm = this;
 	vm.getOneTruck = getOneTruck;
 	// GET the single truck
 	function getOneTruck(){
 		// console.log($routeParams.id);
 		$http.get('/api/trucks/' + $routeParams.id)
-		.then(function(res){
+		.then((res)=>{
 			$scope.truck = res.data;
 		});
 	}
@@ -44,7 +44,7 @@ TruckNewController.$inject = ['$http', '$location', '$scope'];
   // Match Injections		  // Match Injections
 function TruckNewController($http, $location, $scope) {
   	// ViewModel is equal to this		  	// ViewModel is equal to this
-  	var vm = this;
+  	let vm = this;
   	$scope.pos = [];
   	$scope.newTruck = {};
   	$scope.saveTruck = saveTruck;
@@ -55,14 +55,14 @@ function TruckNewController($http, $location, $scope) {
   	function saveTruck() {
 		$http
  		.post('/api/trucks', $scope.newTruck)
- 		.then(function (res) {
-  			var newTruck = res.data;
+ 		.then((res)=>{
+  			let newTruck = res.data;
  				$location.path('/trucks/' + newTruck.id);
   		});
   	}
  	function getLocation(){
          navigator.geolocation.getCurrentPosition(function (position) {
-         var pos = {
+         let pos = {
              lat: position.coords.latitude,
              lng: position.coords.longitude
          	};
@@ -80,14 +80,14 @@ TruckEditController.$inject = ['$http', '$location', '$routeParams'];
 // Match injections
 function TruckEditController($http, $location, $routeParams) {
 	// ViewModel is equal to this
-	var vm = this;
+	let vm = this;
 	vm.getTruck = getTruck;
 	vm.updateTruck = updateTruck;
 
 	// GET the Truck to Update
 	function getTruck(){
 		$http.get('/api/trucks/' + $routeParams.id)
-		.then(function(res){
+		.then((res)=>{
 			vm.updatedTruck = res.data;
 		});
 	}
@@ -95,8 +95,8 @@ function TruckEditController($http, $location, $routeParams) {
 	// PUT the Truck
 	function updateTruck(){
 		$http.put('/api/trucks/' + $routeParams.id, vm.updatedTruck)
-		.then(function(res){
-			var truck = res.data;
+		.then((res)=>{
+			let truck = res.data;
 			$location.path('/api/trucks/' + truck.id);
 		});
 	}
