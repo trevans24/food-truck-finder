@@ -1,8 +1,8 @@
 # food-truck-finder
 Project 3 Food Truck App
 
-##[Link to Our Mobile App](https://theysaidso.com/api)
-##[Logo proto](img/logo.jpg)
+##[Link to Our Mobile App](https://fftt.herokuapp.com)
+![Logo proto](img/logo.jpg)
 ##[]()
 ##[]()
 ##[]()
