@@ -11,7 +11,7 @@ Project 3 Food Truck App - Alexi, Cole, Troy
 
 -by Alexi + Troy
 
-![prototypes : Allie Williams](img/Truck_Detail_Page.png)
+![prototypes : Allie Williams](img/Truck_Detail_Page_Favorited.png)
 
 
 ## Ideation and Influences
@@ -48,7 +48,9 @@ Hosting On Heroku -- took 8+ hr to solve all issues with online hosting and data
 Front End Routing 
 
 
-![sample whiteboard](img/Search_Results.jpg)
+
+
+
 
 ####  What We accomplished
 
