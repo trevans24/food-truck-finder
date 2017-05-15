@@ -1,11 +1,12 @@
 # food-truck-finder
 Project 3 Food Truck App
 
-##[Link to Our Mobile App](https://fftt.herokuapp.com)
+##Link to Our App
+[Link to Our Mobile App](https://fftt.herokuapp.com)
 ![Logo proto](img/logo.jpg)
-##[]()
-##[]()
-##[]()
+![UXmockup](img/UXmockup.jpg)
+[sample whiteboard](img/sampleday.jpg)
+[sample whiteboard](img/workingonit.jpg)
 
 ### Elevator pitch
 
