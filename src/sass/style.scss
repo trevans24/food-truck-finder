@@ -261,3 +261,10 @@ a .navbar-brand .nav-text {
 	margin: 0 auto;
 	width: 70vw;
 }
+
+/////////FOOTER NAV /////////////////////
+@media (min-width: 450px) {
+	footer {
+		display: none;
+	}
+}
