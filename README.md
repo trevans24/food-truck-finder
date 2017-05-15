@@ -5,6 +5,9 @@ Project 3 Food Truck App - Alexi, Cole, Troy
 [Link to Our Mobile App](https://fftt.herokuapp.com)
 ![Logo proto](img/logo.jpg)
 
+## Trello
+[Trello](https://trello.com/b/SrYz1XT3/food-truck-finder)
+
 ### Elevator pitch
 
 'Whats up ninja turtles!?! are y'all totally like hungry?  Well what If I told you that I knew of every dope/bomb.com/fun food truck nearby?  Well I do, cause of Foodie Foodie Truck Truck.  Tacos, Exotic, Hamburgers, all of your chronic-tasty-treats... We got it all.   Wait? What's that? you are actually a food truck owner? Well with our app we make it super simple and steezy to let your followers know where you are.  Just open the app and it updates your location for you, automatically! pretty cheesy right!!! 
