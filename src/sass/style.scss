@@ -268,8 +268,8 @@ a .navbar-brand .nav-text {
 }
 
 /////////FOOTER NAV /////////////////////
-@media (min-width: 450px) {
+@media screen and (min-width: 450px) {
 	footer {
-		display: none;
+		display: none !important;
 	}
 }

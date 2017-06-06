@@ -3,6 +3,10 @@ const app = angular.module('mapsApp', ['ngRoute'])
 // using HTML 5 for location templates
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
     $routeProvider
+            // Welcome
+            .when('/welcome', {
+                templateUrl: '../templates/welcome.html'
+            })
             // Main Routes
             .when('/', {
                 templateUrl:'../templates/home.html',
